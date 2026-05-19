@@ -3,8 +3,11 @@
 
 # 🐍 Python Crash Course — Aula Completa
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=3776AB&center=true&vCenter=true&width=900&lines=Curso+Completo+de+Python;Python+Crash+Course+3rd+Edition;Do+Básico+ao+Desenvolvimento+de+Projetos;Python+para+Programação+e+Ciência+de+Dados" />
-
+<p align="center">
+  <img
+    src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=30&center=true&vCenter=true&width=1000&duration=3000&pause=1000&color=00BFFF&lines=🐍+Python+Crash+Course;Curso+Completo+de+Python;Do+Basico+ao+Avancado;Projetos+com+Django+e+Pygame"
+  />
+</p>
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
