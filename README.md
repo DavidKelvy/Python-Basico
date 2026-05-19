@@ -1,4 +1,4 @@
-````markdown id="x7m2ab"
+
 <div align="center">
 
 # 🐍 Python Crash Course — Aula Completa
