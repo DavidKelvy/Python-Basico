@@ -5,6 +5,6 @@ favorite_languages = {
     'phil': 'python',
     }
 
-print("The following languages have been mentioned:")
+print("Os seguintes idiomas foram mencionados:")
 for language in set(favorite_languages.values()):
     print(language.title())

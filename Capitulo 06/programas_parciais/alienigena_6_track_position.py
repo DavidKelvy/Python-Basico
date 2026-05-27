@@ -1,5 +1,5 @@
 alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
-print(f"Original position: {alien_0['x_position']}")
+print(f"Posição original: {alien_0['x_position']}")
 
 # Mova o alienígena para a direita.
 # Determine o quanto mover o alienígena com base em sua velocidade atual.
@@ -11,7 +11,7 @@ else:
     # Este deve ser um alienígena rápido.
     x_increment = 3
 
-# The new position is the old position plus the increment.
+# A nova posição é a posição antiga mais o incremento.
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 
-print(f"New position: {alien_0['x_position']}")
+print(f"Nova posição: {alien_0['x_position']}")

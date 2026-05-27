@@ -6,4 +6,4 @@ favorite_languages = {
     }
 
 for name in sorted(favorite_languages.keys()):
-    print(f"{name.title()}, thank you for taking the poll.")
+    print(f"{name.title()}, obrigado por participar da enquete.")

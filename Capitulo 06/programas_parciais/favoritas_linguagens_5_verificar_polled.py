@@ -6,4 +6,4 @@ favorite_languages = {
     }
 
 if 'erin' not in favorite_languages.keys():
-    print("Erin, please take our poll!")
+    print("Erin, por favor, participe da nossa enquete!")

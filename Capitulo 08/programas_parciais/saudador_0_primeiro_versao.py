@@ -1,5 +1,5 @@
 def greet_user():
-    """Display a simple greeting."""
-    print("Hello!")
+    """Mostre uma saudação simples."""
+    print("Olá!")
     
 greet_user()

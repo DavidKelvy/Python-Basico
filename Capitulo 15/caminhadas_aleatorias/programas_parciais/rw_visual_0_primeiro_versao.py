@@ -6,7 +6,7 @@ from random_walk import RandomWalk
 rw = RandomWalk()
 rw.fill_walk()
 
-# Plot the points in the walk.
+# Trace os pontos da caminhada.
 plt.style.use('classic')
 fig, ax = plt.subplots()
 ax.scatter(rw.x_values, rw.y_values, s=15)

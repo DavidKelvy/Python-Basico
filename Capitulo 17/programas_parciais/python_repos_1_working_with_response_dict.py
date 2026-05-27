@@ -7,19 +7,19 @@ url += "?q=language:python+sort:stars+stars:>10000"
 
 headers = {"Accept": "application/vnd.github.v3+json"}
 r = requests.get(url, headers=headers)
-print(f"Status code: {r.status_code}")
+print(f"Código de status: {r.status_code}")
 
-# Convert the response object to a dictionary.
+# Converta o objeto de resposta em um dicionário.
 response_dict = r.json()
 
-print(f"Total repositories: {response_dict['total_count']}")
-print(f"Complete results: {not response_dict['incomplete_results']}")
+print(f"Repositórios totais: {response_dict['total_count']}")
+print(f"Resultados completos: {not response_dict['incomplete_results']}")
 
-# Explore information about the repositories.
+# Explore informações sobre os repositórios.
 repo_dicts = response_dict['items']
-print(f"Repositories returned: {len(repo_dicts)}")
+print(f"Repositórios retornados: {len(repo_dicts)}")
 
-# Examine the first repository.
+# Examine o primeiro repositório.
 repo_dict = repo_dicts[0]
 print(f"\nKeys: {len(repo_dict)}")
 for key in sorted(repo_dict.keys()):

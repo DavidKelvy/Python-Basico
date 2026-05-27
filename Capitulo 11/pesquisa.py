@@ -1,21 +1,21 @@
 class AnonymousSurvey:
-    """Collect anonymous answers to a survey question."""
+    """Colete respostas anônimas para uma pergunta de pesquisa."""
 
     def __init__(self, question):
-        """Store a question, and prepare to store responses."""
+        """Armazene uma pergunta e prepare-se para armazenar as respostas."""
         self.question = question
         self.responses = []
 
     def show_question(self):
-        """Show the survey question."""
+        """Mostre a pergunta da pesquisa."""
         print(self.question)
 
     def store_response(self, new_response):
-        """Store a single response to the survey."""
+        """Armazene uma única resposta à pesquisa."""
         self.responses.append(new_response)
         
     def show_results(self):
-        """Show all the responses that have been given."""
-        print("Survey results:")
+        """Mostre todas as respostas que foram dadas."""
+        print("Resultados da pesquisa:")
         for response in self.responses:
             print(f"- {response}")

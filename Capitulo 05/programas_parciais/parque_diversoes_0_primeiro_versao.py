@@ -1,7 +1,7 @@
 age = 12
 if age < 4:
-    print("Your admission cost is $0.")
+    print("O custo de admissão é de $ 0.")
 elif age < 18:
-    print("Your admission cost is $25.")
+    print("O custo da entrada é de $ 25.")
 else:
-    print("Your admission cost is $40.")
+    print("O custo da entrada é de $ 40.")

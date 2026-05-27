@@ -7,19 +7,19 @@ from .forms import TopicForm, EntryForm
 
 
 def index(request):
-    """The home page for Learning Log."""
+    """A página inicial do Registro de aprendizagem."""
     return render(request, 'learning_logs/index.html')
 
 @login_required
 def topics(request):
-    """Show all topics."""
+    """Mostrar todos os tópicos."""
     topics = Topic.objects.filter(owner=request.user).order_by('date_added')
     context = {'topics': topics}
     return render(request, 'learning_logs/topics.html', context)
 
 @login_required
 def topic(request, topic_id):
-    """Show a single topic and all its entries."""
+    """Mostrar um único tópico e todas as suas entradas."""
     topic = Topic.objects.get(id=topic_id)
     # Certifique-se de que o tópico pertence ao usuário atual.
     if topic.owner != request.user:
@@ -31,12 +31,12 @@ def topic(request, topic_id):
 
 @login_required    
 def new_topic(request):
-    """Add a new topic."""
+    """Adicione um novo tópico."""
     if request.method != 'POST':
         # Nenhum dado enviado; crie um formulário em branco.
         form = TopicForm()
     else:
-        # POST data submitted; process data.
+        # Dados POST enviados; processar dados.
         form = TopicForm(data=request.POST)
         if form.is_valid():
             new_topic = form.save(commit=False)
@@ -50,14 +50,14 @@ def new_topic(request):
 
 @login_required    
 def new_entry(request, topic_id):
-    """Add a new entry for a particular topic."""
+    """Adicione uma nova entrada para um tópico específico."""
     topic = Topic.objects.get(id=topic_id)
     
     if request.method != 'POST':
         # Nenhum dado enviado; crie um formulário em branco.
         form = EntryForm()
     else:
-        # POST data submitted; process data.
+        # Dados POST enviados; processar dados.
         form = EntryForm(data=request.POST)
         if form.is_valid():
             new_entry = form.save(commit=False)
@@ -71,17 +71,17 @@ def new_entry(request, topic_id):
 
 @login_required
 def edit_entry(request, entry_id):
-    """Edit an existing entry."""
+    """Edite uma entrada existente."""
     entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
     if topic.owner != request.user:
         raise Http404
 
     if request.method != 'POST':
-        # Initial request; pre-fill form with the current entry.
+        # Solicitação inicial; pré-preencher o formulário com a entrada atual.
         form = EntryForm(instance=entry)
     else:
-        # POST data submitted; process data.
+        # Dados POST enviados; processar dados.
         form = EntryForm(instance=entry, data=request.POST)
         if form.is_valid():
             form.save()

@@ -1,2 +1,2 @@
-message = input("Tell me something, and I will repeat it back to you: ")
+message = input("Diga-me uma coisa e eu repetirei para você: ")
 print(message)

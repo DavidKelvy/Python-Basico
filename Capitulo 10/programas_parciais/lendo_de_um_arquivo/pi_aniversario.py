@@ -9,8 +9,8 @@ pi_string = ''
 for line in lines:
     pi_string += line.lstrip()
 
-birthday = input("Enter your birthday, in the form mmddyy: ")
+birthday = input("Digite sua data de nascimento, no formato mmddyy: ")
 if birthday in pi_string:
-    print("Your birthday appears in the first million digits of pi!")
+    print("Seu aniversário aparece no primeiro milhão de dígitos do pi!")
 else:
-    print("Your birthday does not appear in the first million digits of pi.")
+    print("Seu aniversário não aparece no primeiro milhão de dígitos do pi.")

@@ -2,7 +2,7 @@ from pathlib import Path
 import json
 
 
-username = input("What is your name? ")
+username = input("Qual o seu nome? ")
 
 path = Path('username.json')
 contents = json.dumps(username)

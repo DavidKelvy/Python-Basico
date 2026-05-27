@@ -2,7 +2,7 @@ from pathlib import Path
 
 
 def count_words(path):
-    """Count the approximate number of words in a file."""
+    """Conte o número aproximado de palavras em um arquivo."""
     try:
         contents = path.read_text(encoding='utf-8')
     except FileNotFoundError:

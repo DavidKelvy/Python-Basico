@@ -7,10 +7,10 @@ url += "?q=language:python+sort:stars+stars:>10000"
 
 headers = {"Accept": "application/vnd.github.v3+json"}
 r = requests.get(url, headers=headers)
-print(f"Status code: {r.status_code}")
+print(f"Código de status: {r.status_code}")
 
-# Convert the response object to a dictionary.
+# Converta o objeto de resposta em um dicionário.
 response_dict = r.json()
 
-# Process results.
+# Resultados do processo.
 print(response_dict.keys())

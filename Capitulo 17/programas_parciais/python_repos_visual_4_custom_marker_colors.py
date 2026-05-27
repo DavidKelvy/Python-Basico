@@ -8,17 +8,17 @@ url += "?q=language:python+sort:stars+stars:>10000"
 
 headers = {"Accept": "application/vnd.github.v3+json"}
 r = requests.get(url, headers=headers)
-print(f"Status code: {r.status_code}")
+print(f"Código de status: {r.status_code}")
 
-# Process overall results.
+# Processe os resultados gerais.
 response_dict = r.json()
-print(f"Complete results: {not response_dict['incomplete_results']}")
+print(f"Resultados completos: {not response_dict['incomplete_results']}")
 
-# Process repository information.
+# Processar informações do repositório.
 repo_dicts = response_dict['items']
 repo_links, stars, hover_texts = [], [], []
 for repo_dict in repo_dicts:
-    # Turn repo names into active links.
+    # Transforme nomes de repositórios em links ativos.
     repo_name = repo_dict['name']
     repo_url = repo_dict['html_url']
     repo_link = f"<a href='{repo_url}'>{repo_name}</a>"
@@ -26,7 +26,7 @@ for repo_dict in repo_dicts:
 
     stars.append(repo_dict['stargazers_count'])
 
-    # Build hover texts.
+    # Crie textos flutuantes.
     owner = repo_dict['owner']['login']
     description = repo_dict['description']
     hover_text = f"{owner}<br />{description}"

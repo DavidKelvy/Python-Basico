@@ -1,21 +1,21 @@
-"""A set of classes that can be used to represent electric cars."""
+"""Um conjunto de classes que podem ser usadas para representar carros elétricos."""
 
 from car import Car
 
 
 class Battery:
-    """A simple attempt to model a battery for an electric car."""
+    """Uma simples tentativa de modelar uma bateria para um carro elétrico."""
 
     def __init__(self, battery_size=40):
-        """Initialize the battery's attributes."""
+        """Inicialize os atributos da bateria."""
         self.battery_size = battery_size
 
     def describe_battery(self):
-        """Print a statement describing the battery size."""
+        """Imprima uma declaração descrevendo o tamanho da bateria."""
         print(f"This car has a {self.battery_size}-kWh battery.")
 
     def get_range(self):
-        """Print a statement about the range this battery provides."""
+        """Imprima uma declaração sobre o alcance que esta bateria oferece."""
         if self.battery_size == 40:
             range = 150
         elif self.battery_size == 65:
@@ -24,7 +24,7 @@ class Battery:
         print(f"This car can go about {range} miles on a full charge.")
 
 class ElectricCar(Car):
-    """Models aspects of a car, specific to electric vehicles."""
+    """Modela aspectos de um carro, específicos para veículos elétricos."""
 
     def __init__(self, make, model, year):
         """

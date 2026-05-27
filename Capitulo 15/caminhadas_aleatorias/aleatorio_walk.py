@@ -2,10 +2,10 @@ from random import choice
 
 
 class RandomWalk:
-    """A class to generate random walks."""
+    """Uma classe para gerar passeios aleatórios."""
 
     def __init__(self, num_points=5000):
-        """Initialize attributes of a walk."""
+        """Inicialize atributos de uma caminhada."""
         self.num_points = num_points
 
         # Todas as caminhadas começam em (0, 0).
@@ -13,11 +13,11 @@ class RandomWalk:
         self.y_values = [0]
 
     def fill_walk(self):
-        """Calculate all the points in the walk."""
+        """Calcule todos os pontos da caminhada."""
         # Continue dando passos até a caminhada atingir o comprimento desejado.
         while len(self.x_values) < self.num_points:
 
-            # Decide which direction to go, and how far to go.
+            # Decida qual direção seguir e até onde ir.
             x_direction = choice([1, -1])
             x_distance = choice([0, 1, 2, 3, 4])
             x_step = x_direction * x_distance
@@ -26,11 +26,11 @@ class RandomWalk:
             y_distance = choice([0, 1, 2, 3, 4])
             y_step = y_direction * y_distance
 
-            # Reject moves that go nowhere.
+            # Rejeite movimentos que não levam a lugar nenhum.
             if x_step == 0 and y_step == 0:
                 continue
 
-            # Calculate the new position.
+            # Calcule a nova posição.
             x = self.x_values[-1] + x_step
             y = self.y_values[-1] + y_step
 

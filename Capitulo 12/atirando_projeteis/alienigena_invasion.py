@@ -8,10 +8,10 @@ from bullet import Bullet
 
 
 class AlienInvasion:
-    """Overall class to manage game assets and behavior."""
+    """Aula geral para gerenciar recursos e comportamento do jogo."""
 
     def __init__(self):
-        """Initialize the game, and create game resources."""
+        """Inicialize o jogo e crie recursos de jogo."""
         pygame.init()
         self.clock = pygame.time.Clock()
         self.settings = Settings()
@@ -24,7 +24,7 @@ class AlienInvasion:
         self.bullets = pygame.sprite.Group()
 
     def run_game(self):
-        """Start the main loop for the game."""
+        """Inicie o loop principal do jogo."""
         while True:
             self._check_events()
             self.ship.update()
@@ -33,7 +33,7 @@ class AlienInvasion:
             self.clock.tick(60)
 
     def _check_events(self):
-        """Respond to keypresses and mouse events."""
+        """Responda a pressionamentos de teclas e eventos do mouse."""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -43,7 +43,7 @@ class AlienInvasion:
                 self._check_keyup_events(event)
 
     def _check_keydown_events(self, event):
-        """Respond to keypresses."""
+        """Responda aos pressionamentos de tecla."""
         if event.key == pygame.K_RIGHT:
             self.ship.moving_right = True
         elif event.key == pygame.K_LEFT:
@@ -54,20 +54,20 @@ class AlienInvasion:
             self._fire_bullet()            
 
     def _check_keyup_events(self, event):
-        """Respond to key releases."""
+        """Responda aos principais lançamentos."""
         if event.key == pygame.K_RIGHT:
             self.ship.moving_right = False
         elif event.key == pygame.K_LEFT:
             self.ship.moving_left = False
 
     def _fire_bullet(self):
-        """Create a new bullet and add it to the bullets group."""
+        """Crie um novo marcador e adicione-o ao grupo de marcadores."""
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
 
     def _update_bullets(self):
-        """Update position of bullets and get rid of old bullets."""
+        """Atualize a posição dos marcadores e livre-se dos marcadores antigos."""
         # Atualize as posições dos projéteis.
         self.bullets.update()
 
@@ -77,7 +77,7 @@ class AlienInvasion:
                 self.bullets.remove(bullet)
 
     def _update_screen(self):
-        """Update images on the screen, and flip to the new screen."""
+        """Atualize as imagens na tela e vá para a nova tela."""
         self.screen.fill(self.settings.bg_color)
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()

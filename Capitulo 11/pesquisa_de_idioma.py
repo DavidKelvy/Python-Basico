@@ -9,7 +9,7 @@ language_survey = AnonymousSurvey(question)
 language_survey.show_question()
 print("Enter 'q' at any time to quit.\n")
 while True:
-    response = input("Language: ")
+    response = input("Linguagem: ")
     if response == 'q':
         break
     language_survey.store_response(response)

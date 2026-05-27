@@ -8,7 +8,7 @@ while True:
     rw = RandomWalk(50_000)
     rw.fill_walk()
 
-    # Plot the points in the walk.
+    # Trace os pontos da caminhada.
     plt.style.use('classic')
     fig, ax = plt.subplots()
     point_numbers = range(rw.num_points)
@@ -16,7 +16,7 @@ while True:
        edgecolors='none', s=1)
     ax.set_aspect('equal')
 
-    # Emphasize the first and last points.
+    # Enfatize o primeiro e o último ponto.
     ax.scatter(0, 0, c='green', edgecolors='none', s=100)
     ax.scatter(rw.x_values[-1], rw.y_values[-1], c='red', edgecolors='none',
         s=100)
@@ -27,6 +27,6 @@ while True:
     
     plt.show()
 
-    keep_running = input("Make another walk? (y/n): ")
+    keep_running = input("Fazer outra caminhada? (s/n): ")
     if keep_running == 'n':
         break

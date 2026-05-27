@@ -6,4 +6,4 @@ user_0 = {
 
 for key, value in user_0.items():
     print(f"\nKey: {key}")
-    print(f"Value: {value}")
+    print(f"Valor: {value}")

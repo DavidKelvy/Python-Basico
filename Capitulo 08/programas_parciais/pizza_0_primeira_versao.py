@@ -1,5 +1,5 @@
 def make_pizza(*toppings):
-    """Print the list of toppings that have been requested."""
+    """Imprima a lista de coberturas solicitadas."""
     print(toppings)
 
 make_pizza('pepperoni')

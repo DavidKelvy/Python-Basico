@@ -4,12 +4,12 @@ import json
 import plotly.express as px
 
 
-# Read data as a string and convert to a Python object.
+# Leia os dados como uma string e converta em um objeto Python.
 path = Path('eq_data/eq_data_30_day_m1.geojson')
 contents = path.read_text(encoding='utf-8')
 all_eq_data = json.loads(contents)
 
-# Examine all earthquakes in the dataset.
+# Examine todos os terremotos no conjunto de dados.
 all_eq_dicts = all_eq_data['features']
 
 mags, lons, lats, eq_titles = [], [], [], []

@@ -1,9 +1,9 @@
 """
-WSGI config for ll_project project.
+Configuração WSGI para projeto ll_project.
 
-It exposes the WSGI callable as a module-level variable named ``application``.
+Ele expõe o WSGI que pode ser chamado como uma variável de nível de módulo chamada ``application``.
 
-For more information on this file, see
+Para obter mais informações sobre este arquivo, consulte
 https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/
 """
 

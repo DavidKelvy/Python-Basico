@@ -1,2 +1,2 @@
-# Say hello to everyone.
-print("Hello Python people!")
+# Diga olá a todos.
+print("Olá pessoal do Python!")

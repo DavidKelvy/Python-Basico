@@ -5,4 +5,4 @@ if requested_toppings:
         print(f"Adding {requested_topping}.")
     print("\nFinished making your pizza!")
 else:
-    print("Are you sure you want a plain pizza?")
+    print("Tem certeza de que quer uma pizza simples?")

@@ -5,10 +5,10 @@ from ship import Ship
 
 
 class Scoreboard:
-    """A class to report scoring information."""
+    """Uma classe para relatar informações de pontuação."""
 
     def __init__(self, ai_game):
-        """Initialize scorekeeping attributes."""
+        """Inicialize atributos de pontuação."""
         self.ai_game = ai_game
         self.screen = ai_game.screen
         self.screen_rect = self.screen.get_rect()
@@ -19,14 +19,14 @@ class Scoreboard:
         self.text_color = (30, 30, 30)
         self.font = pygame.font.SysFont(None, 48)
 
-        # Prepare the initial score images.
+        # Prepare as imagens da pontuação inicial.
         self.prep_score()
         self.prep_high_score()
         self.prep_level()
         self.prep_ships()
 
     def prep_score(self):
-        """Turn the score into a rendered image."""
+        """Transforme a pontuação em uma imagem renderizada."""
         rounded_score = round(self.stats.score, -1)
         score_str = f"{rounded_score:,}"
         self.score_image = self.font.render(score_str, True,
@@ -38,30 +38,30 @@ class Scoreboard:
         self.score_rect.top = 20
 
     def prep_high_score(self):
-        """Turn the high score into a rendered image."""
+        """Transforme a pontuação mais alta em uma imagem renderizada."""
         high_score = round(self.stats.high_score, -1)
         high_score_str = f"{high_score:,}"
         self.high_score_image = self.font.render(high_score_str, True,
                 self.text_color, self.settings.bg_color)
         
-        # Center the high score at the top of the screen.
+        # Centralize a pontuação mais alta na parte superior da tela.
         self.high_score_rect = self.high_score_image.get_rect()
         self.high_score_rect.centerx = self.screen_rect.centerx
         self.high_score_rect.top = self.score_rect.top
 
     def prep_level(self):
-        """Turn the level into a rendered image."""
+        """Transforme o nível em uma imagem renderizada."""
         level_str = str(self.stats.level)
         self.level_image = self.font.render(level_str, True,
                 self.text_color, self.settings.bg_color)
 
-        # Position the level below the score.
+        # Posicione o nível abaixo da pontuação.
         self.level_rect = self.level_image.get_rect()
         self.level_rect.right = self.score_rect.right
         self.level_rect.top = self.score_rect.bottom + 10
 
     def prep_ships(self):
-        """Show how many ships are left."""
+        """Mostre quantos navios restam."""
         self.ships = Group()
         for ship_number in range(self.stats.ships_left):
             ship = Ship(self.ai_game)
@@ -70,13 +70,13 @@ class Scoreboard:
             self.ships.add(ship)
 
     def check_high_score(self):
-        """Check to see if there's a new high score."""
+        """Verifique se há uma nova pontuação alta."""
         if self.stats.score > self.stats.high_score:
             self.stats.high_score = self.stats.score
             self.prep_high_score()
 
     def show_score(self):
-        """Draw scores, level, and ships to the screen."""
+        """Desenhe pontuações, níveis e navios na tela."""
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
         self.screen.blit(self.level_image, self.level_rect)

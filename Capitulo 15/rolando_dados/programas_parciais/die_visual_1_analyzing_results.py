@@ -9,7 +9,7 @@ for roll_num in range(1000):
     result = die.roll()
     results.append(result)
 
-# Analyze the results.
+# Analise os resultados.
 frequencies = []
 poss_results = range(1, die.num_sides+1)
 for value in poss_results:

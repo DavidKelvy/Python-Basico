@@ -1,10 +1,10 @@
 requested_toppings = ['mushrooms', 'extra cheese']
 
 if 'mushrooms' in requested_toppings:
-    print("Adding mushrooms.")
+    print("Adicionando cogumelos.")
 if 'pepperoni' in requested_toppings:
-    print("Adding pepperoni.")
+    print("Adicionando calabresa.")
 if 'extra cheese' in requested_toppings:
-    print("Adding extra cheese.")
+    print("Adicionando queijo extra.")
     
 print("\nFinished making your pizza!")

@@ -1,4 +1,4 @@
 age = 19
 if age >= 18:
-    print("You are old enough to vote!")
-    print("Have you registered to vote yet?")
+    print("Você tem idade suficiente para votar!")
+    print("Você já se registrou para votar?")

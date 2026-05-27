@@ -1,14 +1,14 @@
 class Car:
-    """A simple attempt to represent a car."""
+    """Uma simples tentativa de representar um carro."""
 
     def __init__(self, make, model, year):
-        """Initialize attributes to describe a car."""
+        """Inicialize atributos para descrever um carro."""
         self.make = make
         self.model = model
         self.year = year
 
     def get_descriptive_name(self):
-        """Return a neatly formatted descriptive name."""
+        """Retorne um nome descritivo bem formatado."""
         long_name = f"{self.year} {self.make} {self.model}"
         return long_name.title()
 

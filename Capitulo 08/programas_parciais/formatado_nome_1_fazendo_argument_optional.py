@@ -1,5 +1,5 @@
 def get_formatted_name(first_name, middle_name, last_name):
-    """Return a full name, neatly formatted."""
+    """Retorne um nome completo, bem formatado."""
     full_name = f"{first_name} {middle_name} {last_name}"
     return full_name.title()
 

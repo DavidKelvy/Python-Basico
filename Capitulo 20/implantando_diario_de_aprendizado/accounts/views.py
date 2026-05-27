@@ -4,17 +4,17 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 def register(request):
-    """Register a new user."""
+    """Registre um novo usuário."""
     if request.method != 'POST':
         # Exiba o formulário de registro em branco.
         form = UserCreationForm()
     else:
-        # Process completed form.
+        # Processar formulário preenchido.
         form = UserCreationForm(data=request.POST)
 
         if form.is_valid():
             new_user = form.save()
-            # Log the user in and then redirect to home page.
+            # Faça login do usuário e redirecione para a página inicial.
             login(request, new_user)
             return redirect('learning_logs:index')
 

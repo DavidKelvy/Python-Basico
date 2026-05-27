@@ -1,8 +1,8 @@
 class Settings:
-    """A class to store all settings for Alien Invasion."""
+    """Uma classe para armazenar todas as configurações de Alien Invasion."""
 
     def __init__(self):
-        """Initialize the game's settings."""
+        """Inicialize as configurações do jogo."""
         # Configurações da tela
         self.screen_width = 1200
         self.screen_height = 800
@@ -19,7 +19,7 @@ class Settings:
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed = 3
 
-        # Alien settings.
+        # Configurações alienígenas.
         self.alien_speed = 1.0
         self.fleet_drop_speed = 10
         # fleet_direction de 1 representa direita; -1 representa esquerda.

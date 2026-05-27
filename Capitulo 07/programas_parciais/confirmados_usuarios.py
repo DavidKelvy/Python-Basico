@@ -1,5 +1,5 @@
 # Comece com os usuários que precisam ser verificados,
-# and an empty list to hold confirmed users.
+# e uma lista vazia para conter usuários confirmados.
 unconfirmed_users = ['alice', 'brian', 'candace']
 confirmed_users = []
 
@@ -7,7 +7,7 @@ confirmed_users = []
 # Mova cada usuário verificado para a lista de usuários confirmados.
 while unconfirmed_users:
     current_user = unconfirmed_users.pop()
-    print(f"Verifying user: {current_user.title()}")
+    print(f"Verificando usuário: {current_user.title()}")
     confirmed_users.append(current_user)
     
 # Exiba todos os usuários confirmados.

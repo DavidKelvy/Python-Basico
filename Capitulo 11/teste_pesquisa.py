@@ -4,18 +4,18 @@ from survey import AnonymousSurvey
 
 @pytest.fixture
 def language_survey():
-    """A survey that will be available to all test functions."""
+    """Uma pesquisa que estará disponível para todas as funções de teste."""
     question = "What language did you first learn to speak?"
     language_survey = AnonymousSurvey(question)
     return language_survey
 
 def test_store_single_response(language_survey):
-    """Test that a single response is stored properly."""
+    """Teste se uma única resposta está armazenada corretamente."""
     language_survey.store_response('English')
     assert 'English' in language_survey.responses
 
 def test_store_three_responses(language_survey):
-    """Test that three individual responses are stored properly."""
+    """Teste se três respostas individuais estão armazenadas corretamente."""
     responses = ['English', 'Spanish', 'Mandarin']
     for response in responses:
         language_survey.store_response(response)

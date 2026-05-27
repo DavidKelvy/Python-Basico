@@ -11,7 +11,7 @@ lines = path.read_text().splitlines()
 reader = csv.reader(lines)
 header_row = next(reader)
 
-# Extract dates, and high and low temperatures.
+# Extrair datas e temperaturas altas e baixas.
 dates, highs, lows = [], [], []
 for row in reader:
     current_date = datetime.strptime(row[2], '%Y-%m-%d')
@@ -19,20 +19,20 @@ for row in reader:
         high = int(row[3])
         low = int(row[4])
     except ValueError:
-        print(f"Missing data for {current_date}")
+        print(f"Dados faltantes para {current_date}")
     else:
         dates.append(current_date)
         highs.append(high)
         lows.append(low)
 
-# Plot the high and low temperatures.
+# Trace as temperaturas altas e baixas.
 plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
 ax.plot(dates, highs, color='red', alpha=0.5)
 ax.plot(dates, lows, color='blue', alpha=0.5)
 ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
-# Format plot.
+# Formate o gráfico.
 title = "Daily High and Low Temperatures, 2021\nDeath Valley, CA"
 ax.set_title(title, fontsize=20)
 fig.autofmt_xdate()

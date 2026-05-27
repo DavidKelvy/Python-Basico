@@ -18,4 +18,4 @@ for alien in aliens[:5]:
 print("...")
 
 # Mostre quantos alienígenas foram criados.
-print(f"Total number of aliens: {len(aliens)}")
+print(f"Número total de alienígenas: {len(aliens)}")

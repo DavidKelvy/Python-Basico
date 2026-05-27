@@ -1,5 +1,5 @@
 def make_pizza(*toppings):
-    """Summarize the pizza we are about to make."""
+    """Resuma a pizza que estamos prestes a fazer."""
     print("\nMaking a pizza with the following toppings:")
     for topping in toppings:
         print(f"- {topping}")

@@ -10,18 +10,18 @@ lines = path.read_text().splitlines()
 reader = csv.reader(lines)
 header_row = next(reader)
 
-# Extract high temperatures.
+# Extraia altas temperaturas.
 highs = []
 for row in reader:
     high = int(row[4])
     highs.append(high)
 
-# Plot the high temperatures.
+# Trace as altas temperaturas.
 plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
 ax.plot(highs, color='red')
 
-# Format plot.
+# Formate o gráfico.
 ax.set_title("Daily High Temperatures, July 2021", fontsize=24)
 ax.set_xlabel('', fontsize=16)
 ax.set_ylabel("Temperature (F)", fontsize=16)

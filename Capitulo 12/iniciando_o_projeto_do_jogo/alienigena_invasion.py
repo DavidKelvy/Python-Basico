@@ -6,10 +6,10 @@ from settings import Settings
 
 
 class AlienInvasion:
-    """Overall class to manage game assets and behavior."""
+    """Aula geral para gerenciar recursos e comportamento do jogo."""
 
     def __init__(self):
-        """Initialize the game, and create game resources."""
+        """Inicialize o jogo e crie recursos de jogo."""
         pygame.init()
         self.clock = pygame.time.Clock()
         self.settings = Settings()
@@ -19,7 +19,7 @@ class AlienInvasion:
         pygame.display.set_caption("Alien Invasion")
 
     def run_game(self):
-        """Start the main loop for the game."""
+        """Inicie o loop principal do jogo."""
         while True:
             # Observe eventos do teclado e do mouse.
             for event in pygame.event.get():
