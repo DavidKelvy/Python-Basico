@@ -8,8 +8,9 @@ print("Python é divertido!")
 
 # Comentários explicam o código e não são executados
 # isto é um comentário de linha
-e"
-está como string de várias linhas"
+"""Isto é uma string de várias linhas.
+Elas podem ocupar mais de uma linha no código.
+"""
 
 # Variáveis armazenam valores
 mensagem = 'Bem-vindo ao Python!'
