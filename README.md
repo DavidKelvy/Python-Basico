@@ -133,6 +133,17 @@ O material aborda desde:
 
 ---
 
+# 💼 PARTE V — Python Profissional
+
+###  Capítulo 21 — Python profissional
+- Boas práticas
+- Context managers
+- Decoradores
+- Testes com pytest
+- sqlite e organização de projetos
+
+---
+
 # 🧠 Tecnologias Utilizadas
 
 ```python
