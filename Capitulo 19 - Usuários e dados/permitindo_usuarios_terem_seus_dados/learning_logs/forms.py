@@ -1,3 +1,5 @@
+# Requisitos: pip install django
+# Import: from django import forms
 from django import forms
 
 from .models import Topic, Entry

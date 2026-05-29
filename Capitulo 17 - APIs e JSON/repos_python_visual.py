@@ -1,5 +1,12 @@
-import requests
-import plotly.express as px
+try:
+        import requests
+except ImportError:
+        raise ImportError("Módulo 'requests' não encontrado. Instale com: pip install requests") from None
+
+try:
+        import plotly.express as px
+except ImportError:
+        raise ImportError("Módulo 'plotly' não encontrado. Instale com: pip install plotly") from None
 
 
 # Faça uma chamada de API e verifique a resposta.

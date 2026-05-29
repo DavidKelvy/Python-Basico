@@ -1,5 +1,11 @@
+# Requisitos: pip install django
+# Import: from django.shortcuts import render, redirect
 from django.shortcuts import render, redirect
+# Requisitos: pip install django
+# Import: from django.contrib.auth import login
 from django.contrib.auth import login
+# Requisitos: pip install django
+# Import: from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import UserCreationForm
 
 

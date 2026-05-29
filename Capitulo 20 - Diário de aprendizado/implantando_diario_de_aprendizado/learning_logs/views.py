@@ -1,6 +1,9 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
-from django.http import Http404
+try:
+    from django.shortcuts import render, redirect
+    from django.contrib.auth.decorators import login_required
+    from django.http import Http404
+except ImportError:
+    raise ImportError("Módulo 'django' não encontrado. Instale com: pip install django") from None
 
 from .models import Topic, Entry
 from .forms import TopicForm, EntryForm

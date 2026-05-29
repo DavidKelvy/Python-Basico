@@ -1,7 +1,10 @@
 import sys
 from time import sleep
 
-import pygame
+try:
+    import pygame
+except ImportError:
+    raise ImportError("Módulo 'pygame' não encontrado. Instale com: pip install pygame") from None
 
 from settings import Settings
 from game_stats import GameStats

@@ -1,5 +1,7 @@
 # Gerado por Django 4.1b1 em 01/07/2022 03:24
 
+# Requisitos: pip install django
+# Import: from django.db import migrations, models
 from django.db import migrations, models
 
 

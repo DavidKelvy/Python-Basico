@@ -1,7 +1,10 @@
 from pathlib import Path
 import json
 
-import plotly.express as px
+try:
+    import plotly.express as px
+except ImportError:
+    raise ImportError("Módulo 'plotly' não encontrado. Instale com: pip install plotly") from None
 
 
 # Leia os dados como uma string e converta em um objeto Python.

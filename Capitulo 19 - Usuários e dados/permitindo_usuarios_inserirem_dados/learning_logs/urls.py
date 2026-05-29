@@ -1,5 +1,7 @@
 """Define padrões de URL para learning_logs."""
 
+# Requisitos: pip install django
+# Import: from django.urls import path
 from django.urls import path
 
 from . import views

@@ -1,5 +1,11 @@
+# Requisitos: pip install django
+# Import: from django.shortcuts import render, redirect
 from django.shortcuts import render, redirect
+# Requisitos: pip install django
+# Import: from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import login_required
+# Requisitos: pip install django
+# Import: from django.http import Http404
 from django.http import Http404
 
 from .models import Topic, Entry

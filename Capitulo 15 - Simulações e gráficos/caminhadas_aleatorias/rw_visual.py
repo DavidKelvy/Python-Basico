@@ -1,4 +1,7 @@
-import matplotlib.pyplot as plt
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    raise ImportError("Módulo 'matplotlib' não encontrado. Instale com: pip install matplotlib") from None
 
 from random_walk import RandomWalk
 

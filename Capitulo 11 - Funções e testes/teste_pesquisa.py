@@ -1,4 +1,7 @@
-import pytest
+try:
+    import pytest
+except ImportError:
+    raise ImportError("Módulo 'pytest' não encontrado. Instale com: pip install pytest") from None
 from survey import AnonymousSurvey
 
 

@@ -1,5 +1,7 @@
 """Define padrões de URL para contas."""
 
+# Requisitos: pip install django
+# Import: from django.urls import path, include
 from django.urls import path, include
 
 from . import views

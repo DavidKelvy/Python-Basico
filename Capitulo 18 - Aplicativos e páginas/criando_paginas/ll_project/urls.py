@@ -13,7 +13,11 @@ Incluindo outro URLconf
     1. Importe a função include(): from django.urls import include, path
     2. Adicione um URL aos urlpatterns: path('blog/', include('blog.urls'))
 """
+# Requisitos: pip install django
+# Import: from django.contrib import admin
 from django.contrib import admin
+# Requisitos: pip install django
+# Import: from django.urls import path, include
 from django.urls import path, include
 
 urlpatterns = [

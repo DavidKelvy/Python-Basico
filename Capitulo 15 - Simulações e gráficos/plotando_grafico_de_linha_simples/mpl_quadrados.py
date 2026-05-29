@@ -1,4 +1,7 @@
-import matplotlib.pyplot as plt
+try:
+	import matplotlib.pyplot as plt
+except ImportError:
+	raise ImportError("Módulo 'matplotlib' não encontrado. Instale com: pip install matplotlib") from None
 
 input_values = [1, 2, 3, 4, 5]
 squares = [1, 4, 9, 16, 25]

@@ -1,6 +1,9 @@
 from operator import itemgetter
 
-import requests
+try:
+    import requests
+except ImportError:
+    raise ImportError("Módulo 'requests' não encontrado. Instale com: pip install requests") from None
 
 
 # Faça uma chamada de API e verifique a resposta.

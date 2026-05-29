@@ -1,3 +1,5 @@
+# Requisitos: pip install django
+# Import: from django.shortcuts import render, redirect
 from django.shortcuts import render, redirect
 
 from .models import Topic, Entry

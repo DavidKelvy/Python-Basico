@@ -1,6 +1,8 @@
 import sys
 from time import sleep
 
+# Requisitos: pip install pygame
+# Import: import pygame
 import pygame
 
 from settings import Settings

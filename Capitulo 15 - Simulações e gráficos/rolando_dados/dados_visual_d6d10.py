@@ -1,4 +1,7 @@
-import plotly.express as px
+try:
+    import plotly.express as px
+except ImportError:
+    raise ImportError("Módulo 'plotly' não encontrado. Instale com: pip install plotly") from None
 
 from die import Die
 

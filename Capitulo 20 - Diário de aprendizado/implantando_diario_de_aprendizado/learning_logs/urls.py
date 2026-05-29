@@ -1,6 +1,9 @@
 """Define padrões de URL para learning_logs."""
 
-from django.urls import path
+try:
+    from django.urls import path
+except ImportError:
+    raise ImportError("Módulo 'django' não encontrado. Instale com: pip install django") from None
 
 from . import views
 

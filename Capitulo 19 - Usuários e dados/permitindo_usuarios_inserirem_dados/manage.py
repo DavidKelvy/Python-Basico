@@ -8,6 +8,8 @@ def main():
     """Execute tarefas administrativas."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'll_project.settings')
     try:
+# Requisitos: pip install django
+# Import: from django.core.management import execute_from_command_line
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(

@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/dev/howto/deployment/asgi/
 
 import os
 
+# Requisitos: pip install django
+# Import: from django.core.asgi import get_asgi_application
 from django.core.asgi import get_asgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'll_project.settings')

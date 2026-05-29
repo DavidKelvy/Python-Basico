@@ -1,4 +1,7 @@
-import requests
+try:
+	import requests
+except ImportError:
+	raise ImportError("Módulo 'requests' não encontrado. Instale com: pip install requests") from None
 import json
 
 

@@ -1,3 +1,5 @@
+# Requisitos: pip install pygame
+# Import: import pygame
 import pygame
 from pygame.sprite import Sprite
 

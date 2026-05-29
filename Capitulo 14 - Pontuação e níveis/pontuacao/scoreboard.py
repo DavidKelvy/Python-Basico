@@ -1,4 +1,7 @@
-import pygame.font
+try:
+    import pygame.font
+except ImportError:
+    raise ImportError("Módulo 'pygame' não encontrado. Instale com: pip install pygame") from None
 from pygame.sprite import Group
 
 from ship import Ship

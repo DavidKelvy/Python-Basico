@@ -1,4 +1,8 @@
+# Requisitos: pip install django
+# Import: from django.db import models
 from django.db import models
+# Requisitos: pip install django
+# Import: from django.contrib.auth.models import User
 from django.contrib.auth.models import User
 
 

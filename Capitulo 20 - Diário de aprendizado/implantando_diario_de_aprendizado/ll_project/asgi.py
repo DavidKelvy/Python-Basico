@@ -9,7 +9,10 @@ https://docs.djangoproject.com/en/dev/howto/deployment/asgi/
 
 import os
 
-from django.core.asgi import get_asgi_application
+try:
+	from django.core.asgi import get_asgi_application
+except ImportError:
+	raise ImportError("Módulo 'django' não encontrado. Instale com: pip install django") from None
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'll_project.settings')
 

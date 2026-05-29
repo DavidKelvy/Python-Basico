@@ -1,6 +1,10 @@
 # Gerado por Django 4.1b1 em 01/07/2022 03:28
 
+# Requisitos: pip install django
+# Import: from django.db import migrations, models
 from django.db import migrations, models
+# Requisitos: pip install django
+# Import: import django.db.models.deletion
 import django.db.models.deletion
 
 

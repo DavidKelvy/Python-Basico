@@ -2,7 +2,10 @@ from pathlib import Path
 import csv
 from datetime import datetime
 
-import matplotlib.pyplot as plt
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    raise ImportError("Módulo 'matplotlib' não encontrado. Instale com: pip install matplotlib") from None
 
 
 path = Path('weather_data/death_valley_2021_simple.csv')

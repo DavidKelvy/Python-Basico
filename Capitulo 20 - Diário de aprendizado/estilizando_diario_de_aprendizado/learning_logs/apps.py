@@ -1,3 +1,5 @@
+# Requisitos: pip install django
+# Import: from django.apps import AppConfig
 from django.apps import AppConfig
 
 

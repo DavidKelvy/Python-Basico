@@ -13,8 +13,11 @@ Incluindo outro URLconf
     1. Importe a função include(): from django.urls import include, path
     2. Adicione um URL aos urlpatterns: path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
+try:
+    from django.contrib import admin
+    from django.urls import path, include
+except ImportError:
+    raise ImportError("Módulo 'django' não encontrado. Instale com: pip install django") from None
 
 urlpatterns = [
     path('admin/', admin.site.urls),
