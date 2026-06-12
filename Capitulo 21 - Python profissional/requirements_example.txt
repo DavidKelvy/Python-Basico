@@ -1,5 +1,0 @@
-pytest
-requests
-django
-pygame
-matplotlib
