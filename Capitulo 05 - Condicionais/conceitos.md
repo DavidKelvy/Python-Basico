@@ -1,36 +1,25 @@
-# Capítulo 05 — Condicionais (detalhado)
+# Capítulo 05 — Condicionais
 
-1) `if/elif/else`
+Este capítulo mostra como tomar decisões no código.
 
-```python
-x = 10
-if x < 0:
-	print('negativo')
-elif x == 0:
-	print('zero')
-else:
-	print('positivo')
-```
+## if
+- `if` executa um bloco quando uma condição é verdadeira.
 
-2) Operadores lógicos
+## elif
+- `elif` testa outra condição quando o `if` anterior falha.
 
-```python
-a = True
-b = False
-print(a and b)
-print(a or b)
-print(not a)
-```
+## else
+- `else` roda quando nenhuma condição anterior foi verdadeira.
 
-3) `in` e testes de pertinência
+## Operadores de comparação
+- `==`, `!=`, `>`, `<`, `>=`, `<=`.
+- Retornam `True` ou `False`.
 
-```python
-if 'a' in 'casa':
-	print('tem a')
-```
+## Operadores lógicos
+- `and` combina condições que precisam ser verdadeiras juntos.
+- `or` exige que pelo menos uma seja verdadeira.
+- `not` inverte o valor booleano.
 
-4) Valores truthy/falsy
-
-- Strings vazias, listas vazias, `0`, `None` são avaliados como `False`.
-
-Dica: escreva condições claras e use funções auxiliares para lógica complexa.
+## Pertinência
+- `in` verifica se um valor está presente em uma sequência.
+- `not in` verifica o contrário.

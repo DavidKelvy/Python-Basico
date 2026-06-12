@@ -1,37 +1,27 @@
-# Capítulo 04 — Laços e operações numéricas (detalhado)
+# Capítulo 04 — Laços e operações numéricas
 
-1) `for` com `range`
+Este capítulo ensina como repetir tarefas e manipular números.
 
-```python
-for i in range(1, 6):
-	print(i)
-```
+## Loop for
+- `for` percorre uma sequência ou intervalo.
+- `range(start, stop, step)` gera números.
 
-2) `while`
+## Loop while
+- `while` executa enquanto a condição for verdadeira.
+- Use `n += 1` para avançar o contador e evitar loop infinito.
 
-```python
-n = 0
-while n < 3:
-	print(n)
-	n += 1
-```
+## break e continue
+- `break` interrompe o loop imediatamente.
+- `continue` pula para a próxima iteração sem executar o resto do bloco.
 
-3) `break` e `continue`
+## Operadores numéricos
+- `+`, `-`, `*`, `/`.
+- `//` divisão inteira, `%` resto, `**` potência.
 
-```python
-for i in range(10):
-	if i == 5:
-		break
-	if i % 2 == 0:
-		continue
-	print(i)
-```
+## Funções matemáticas
+- Importe `math` para funções como `sqrt()`.
+- `abs()` calcula valor absoluto.
 
-4) Operações numéricas e `math`
-
-```python
-import math
-print(math.sqrt(16))
-```
-
-Dica: use `enumerate` e `zip` para iterar com índices e múltiplas sequências.
+## Enumerate e zip
+- `enumerate()` dá índice e valor.
+- `zip()` percorre várias sequências ao mesmo tempo.

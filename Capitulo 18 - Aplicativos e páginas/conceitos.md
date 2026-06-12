@@ -1,19 +1,27 @@
-# Capítulo 18 — Aplicativos e páginas (detalhado)
+# Capítulo 18 — Aplicativos e páginas
 
-1) Views e templates (Django)
+Este capítulo explica conceitos de Django e desenvolvimento web.
 
-```python
-# urls.py
-from django.urls import path
-from . import views
-urlpatterns = [path('', views.index, name='index')]
-```
+## Projeto Django
+- Um projeto Django pode conter configurações e URLs.
+- `manage.py` é usado para comandos do framework.
 
-2) Migrations
+## App
+- App é um componente do projeto.
+- Contém `views.py`, `models.py`, `urls.py` e `templates`.
 
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
+## URLs
+- Mapear URLs para funções ou classes de view.
+- Usam `path()` em `urls.py`.
 
-Dica: use ambientes virtuais e `requirements.txt` para replicabilidade.
+## Views
+- Funções que retornam páginas ou respostas.
+- Podem renderizar templates.
+
+## Templates
+- HTML com sintaxe Django para mostrar dados.
+- Use variáveis e laços no template.
+
+## Migrations
+- Migrations atualizam o esquema do banco de dados.
+- Criadas com `makemigrations` e aplicadas com `migrate`.

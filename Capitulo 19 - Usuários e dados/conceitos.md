@@ -1,15 +1,23 @@
-# Capítulo 19 — Usuários e dados (detalhado)
+# Capítulo 19 — Usuários e dados
 
-1) Models e autenticação (Django)
+Este capítulo aborda usuários, autenticação e dados em aplicativos.
 
-```python
-from django.db import models
-class Topic(models.Model):
-    text = models.CharField(max_length=200)
-    owner = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-```
+## Modelos
+- Classes que representam tabelas do banco.
+- Definem campos como `CharField`, `IntegerField`.
 
-2) Views protegidas
-- Usar `@login_required` para limitar acesso.
+## Autenticação
+- Login e logout verificam identidade do usuário.
+- Django oferece sistema pronto para autenticação.
 
-Dica: sempre validar entradas em forms para prevenir dados inválidos.
+## Autorização
+- Controle de quem pode acessar dados ou páginas.
+- Use permissões e decoradores.
+
+## Forms
+- Recebem e validam dados enviados pelo usuário.
+- `forms.py` define formulários e regras de validação.
+
+## Templates e contexto
+- Templates exibem dados ao usuário.
+- Contexto passa dados do view para o template.

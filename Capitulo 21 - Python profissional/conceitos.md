@@ -1,31 +1,34 @@
-# Capítulo 21 — Python profissional (detalhado)
+# Capítulo 21 — Python profissional
 
-1) Pathlib e filesystem
+Este capítulo reúne práticas e ferramentas para código mais maduro.
 
-```python
-from pathlib import Path
-p = Path('arquivo.txt')
-print(p.exists())
-```
+## pathlib
+- `Path()` manipula caminhos de arquivos de forma segura.
+- Substitui concatenação manual de strings.
 
-2) SQLite básico
+## os
+- `os` acessa o sistema de arquivos e variáveis de ambiente.
 
-```python
-import sqlite3
-conn = sqlite3.connect('db.sqlite3')
-```
+## datetime
+- Trabalhar com datas e horas.
+- `datetime.now()` obtém data e hora atual.
 
-3) Decoradores
+## sqlite3
+- Banco de dados leve embutido no Python.
+- `sqlite3.connect()` abre conexão.
 
-```python
-def log(func):
-    def wrapper(*args, **kwargs):
-        print('chamando', func.__name__)
-        return func(*args, **kwargs)
-    return wrapper
-```
+## Compreensões e geradores
+- Compreensões criam listas, conjuntos ou dicionários de forma concisa.
+- Geradores usam parênteses e produzem valores sob demanda.
 
-4) Testes e empacotamento
-- `pytest` e `requirements_example.txt`.
+## Decoradores
+- Funções que modificam outras funções.
+- Úteis para adicionar comportamento sem alterar a lógica original.
 
-Dica: escreva README e exemplos de uso para pacotes que for distribuir.
+## Pacotes e módulos
+- `__init__.py` transforma pastas em pacotes.
+- Organize o código em arquivos menores.
+
+## Testes
+- Escrever testes automatizados melhora a confiabilidade.
+- `pytest` é um framework comum.

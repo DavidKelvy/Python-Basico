@@ -1,15 +1,23 @@
-# Capítulo 11 — Funções e testes (detalhado)
+# Capítulo 11 — Funções e testes
 
-1) Escrevendo testes com `pytest`
+Este capítulo cobre boas práticas para funções e testes.
 
-```python
-# teste_funcao.py
-from modulo import soma
+## Funções
+- Devem ser pequenas e fazer uma única coisa.
+- Separam lógica do programa e facilitam reuso.
 
-def test_soma():
-	assert soma(2,3) == 5
-```
+## test_
+- Funções de teste geralmente começam com `test_`.
+- Arquivos de teste também começam com `test_`.
 
-2) `assert` e mensagens claras
+## assert
+- `assert` verifica resultados esperados.
+- Lança `AssertionError` se a condição falhar.
 
-Dica: cada teste deve validar uma única hipótese e ser independente.
+## pytest
+- Framework popular para testes em Python.
+- Detecta automaticamente testes em arquivos nomeados corretamente.
+
+## Casos de teste
+- Teste entradas válidas e inválidas.
+- Verifique retornos e exceções.

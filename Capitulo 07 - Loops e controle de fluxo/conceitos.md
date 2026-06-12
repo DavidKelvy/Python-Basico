@@ -1,23 +1,25 @@
-# Capítulo 07 — Loops e controle de fluxo (detalhado)
+# Capítulo 07 — Loops e controle de fluxo
 
-1) `enumerate` e `zip`
+Este capítulo aprofunda formas de controlar a execução do código.
 
-```python
-nomes = ['Ana', 'Bruno']
-idades = [30, 25]
-for i, (n, idd) in enumerate(zip(nomes, idades)):
-	print(i, n, idd)
-```
+## for e while
+- `for` percorre sequências.
+- `while` repete enquanto uma condição for verdadeira.
 
-2) Loop sentinel e validação de entrada
+## break
+- Interrompe o loop imediatamente.
 
-```python
-while True:
-	s = input('Digite sair para terminar: ')
-	if s == 'sair':
-		break
-```
+## continue
+- Pula para a próxima iteração sem executar o restante do bloco.
 
-3) `for/else` (executa `else` se não houve `break`)
+## for/else
+- O bloco `else` executa se o loop terminar normalmente, sem `break`.
 
-Dica: prefira loops claros e evite mutações desnecessárias durante iterações.
+## enumerate
+- Retorna pares `(índice, valor)` ao iterar.
+
+## zip
+- Combina várias sequências em tuplas paralelas.
+
+## Validação com laços
+- Use loops para pedir entrada até que os dados estejam corretos.

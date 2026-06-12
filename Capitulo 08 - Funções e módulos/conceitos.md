@@ -1,29 +1,37 @@
-# Capítulo 08 — Funções e módulos (detalhado)
+# Capítulo 08 — Funções e módulos
 
-1) Definindo funções
+Este capítulo mostra como organizar código com funções e arquivos.
 
-```python
-def soma(a, b=0):
-	return a + b
-```
+## def
+- `def nome(param):` define uma função.
+- Blocos dentro da função são indentados.
 
-2) `*args` e `**kwargs`
+## return
+- `return` devolve um valor da função.
+- Pode ser `None` se não houver retorno explícito.
 
-```python
-def func(*args, **kwargs):
-	print(args)
-	print(kwargs)
-```
+## Parâmetros e argumentos
+- Parâmetros são nomes na definição.
+- Argumentos são valores passados na chamada.
+- Parâmetros padrão fornecem valores quando nada é passado.
 
-3) Módulos e imports
-- `import modulo`, `from modulo import func`, `import modulo as m`.
+## *args e **kwargs
+- `*args` agrupa argumentos posicionais extras em uma tupla.
+- `**kwargs` agrupa argumentos nomeados extras em um dicionário.
 
-4) `__name__ == '__main__'`
+## Docstrings
+- Documentam o propósito de funções e módulos.
+- Ficam logo após a definição, entre três aspas.
 
-```python
-if __name__ == '__main__':
-	# código de execução direta
-	pass
-```
+## Importar módulos
+- `import modulo`
+- `from modulo import func`
+- `import modulo as alias`
 
-Dica: escreva docstrings e mantenha funções pequenas e testáveis.
+## Pacotes
+- Pastas com `__init__.py` são pacotes Python.
+- Permitem organizar vários módulos.
+
+## __name__ == '__main__'
+- Verifica se o script está sendo executado diretamente.
+- Evita rodar código no momento do import.

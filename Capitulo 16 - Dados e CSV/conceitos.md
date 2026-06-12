@@ -1,21 +1,24 @@
-# Capítulo 16 — Dados e CSV (detalhado)
+# Capítulo 16 — Dados e CSV
 
-1) Leitura básica com `csv`
+Este capítulo ensina a trabalhar com dados tabulares.
 
-```python
-import csv
-with open('sitka_weather_2021_simples.csv') as f:
-    reader = csv.reader(f)
-    for row in reader:
-        print(row)
-```
+## CSV
+- Arquivo CSV contém valores separados por vírgula.
+- Cada linha representa um registro.
 
-2) Usando `pandas` para facilitar
+## csv.reader
+- Lê o arquivo como linhas de listas.
+- Exemplo: `for linha in leitor:`.
 
-```python
-import pandas as pd
-df = pd.read_csv('sitka_weather_2021_simples.csv')
-print(df.head())
-```
+## csv.DictReader
+- Lê cada linha como dicionário.
+- Usa os cabeçalhos do arquivo como chaves.
 
-Dica: verifique o encoding e delimitador do CSV antes de processar.
+## pandas
+- `pd.read_csv()` carrega dados em um DataFrame.
+- Facilita análise e limpeza.
+
+## Limpeza de dados
+- Remova espaços extras com `.strip()`.
+- Converta tipos com `int()` ou `float()`.
+- Trate valores ausentes e inconsistentes.

@@ -1,21 +1,21 @@
-# Capítulo 12 — Projeto de jogo (detalhado)
+# Capítulo 12 — Projeto de jogo
 
-1) Estrutura e `settings`
-- Centralize constantes (tamanho da tela, cores, velocidades).
+Este capítulo mostra como construir um jogo básico com Pygame.
 
-2) Loop principal
+## pygame.init()
+- Inicializa os módulos do Pygame.
 
-```python
-while running:
-	for event in pygame.event.get():
-		if event.type == pygame.QUIT:
-			running = False
-	# atualizar estado
-	# desenhar tela
-	pygame.display.flip()
-```
+## Tela
+- `pygame.display.set_mode((largura, altura))` cria a janela.
 
-3) Sprites e colisões
-- Use `pygame.sprite.Sprite` e `Group` para organizar atualizações e desenho.
+## Loop principal
+- Repetição principal do jogo.
+- Atualiza lógica, trata eventos e desenha a tela.
 
-Dica: mantenha atualização de lógica e desenho separados para clareza.
+## Eventos
+- `pygame.event.get()` retorna eventos de teclado, mouse e janela.
+- Trate `QUIT` para fechar o jogo.
+
+## Sprites
+- Objetos do jogo que podem ser desenhados e atualizados.
+- Facilita organizar inimigos, jogador e projéteis.

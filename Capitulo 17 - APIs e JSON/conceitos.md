@@ -1,15 +1,19 @@
-# Capítulo 17 — APIs e JSON (detalhado)
+# Capítulo 17 — APIs e JSON
 
-1) Requisições HTTP com `requests`
+Este capítulo mostra como buscar dados da web.
 
-```python
-import requests
-r = requests.get('https://api.github.com')
-if r.status_code == 200:
-    data = r.json()
-```
+## API
+- API é uma interface para acessar dados ou serviços.
+- Normalmente usa HTTP.
 
-2) Manipular JSON
-- A resposta `json()` vira `dict`/`list` em Python.
+## requests
+- `requests.get(url)` envia requisição à API.
+- `response.status_code` verifica se deu certo.
 
-Dica: trate erros de rede e adicione `timeout` nas requisições.
+## JSON
+- JSON é um formato de dados em texto.
+- `response.json()` converte JSON em dicionários e listas.
+
+## Tratamento de erros
+- `try/except` captura falhas de conexão ou resposta inválida.
+- Verifique `status_code` antes de usar os dados.

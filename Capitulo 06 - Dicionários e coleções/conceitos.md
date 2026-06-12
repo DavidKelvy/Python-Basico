@@ -1,23 +1,28 @@
-# Capítulo 06 — Dicionários e coleções (detalhado)
+# Capítulo 06 — Dicionários e coleções
 
-1) Dicionários
+Este capítulo explica estruturas para armazenar pares e coleções.
 
-```python
-pessoa = {'nome': 'Ana', 'idade': 30}
-print(pessoa['nome'])
-print(pessoa.get('altura', 'não informado'))
-```
+## Dicionário
+- Dicionários ligam chaves a valores.
+- Sintaxe: `{'nome': 'Ana', 'idade': 30}`.
 
-2) Métodos úteis
-- `.keys()`, `.values()`, `.items()`, `.update()`.
+## Acesso e métodos
+- `dict['chave']` obtém o valor.
+- `dict.get('chave', default)` evita erro se a chave não existir.
+- `.keys()`, `.values()`, `.items()` retornam chaves, valores e pares.
 
-3) Estruturas aninhadas
+## Alterar e remover
+- `dict['nova'] = valor` adiciona ou atualiza.
+- `.pop('chave')` remove e retorna o valor.
+- `.update(other)` combina dicionários.
 
-```python
-usuarios = [{'nome': 'Ana'}, {'nome': 'Bruno'}]
-```
+## Tuplas
+- Tuplas são sequências imutáveis: `(1, 2, 3)`.
+- Não podem ser alteradas depois de criadas.
 
-4) Sets e tuplas
-- `set` para coleções sem duplicatas; `tuple` para imutabilidade.
+## Conjuntos
+- `set` guarda elementos únicos.
+- Operações como união (`|`), interseção (`&`) e diferença (`-`).
 
-Dica: use `dict.get()` para evitar exceções quando a chave pode faltar.
+## Coleções aninhadas
+- Dicionários podem conter listas e outros dicionários.

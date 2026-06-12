@@ -1,34 +1,30 @@
-# Capítulo 10 — Arquivos e exceções (detalhado)
+# Capítulo 10 — Arquivos e exceções
 
-1) Leitura com `with`
+Este capítulo explica leitura/escrita de arquivos e tratamento de erros.
 
-```python
-with open('arquivo.txt', 'r', encoding='utf-8') as f:
-	conteudo = f.read()
-```
+## Abrir arquivo
+- `open('arquivo.txt', 'r')` para leitura.
+- `open('arquivo.txt', 'w')` para escrita.
+- `open('arquivo.txt', 'a')` para anexar.
 
-2) Escrita
+## with
+- O context manager `with` fecha o arquivo automaticamente.
+- Reduz risco de arquivos abertos e erros.
 
-```python
-with open('out.txt', 'w', encoding='utf-8') as f:
-	f.write('linha\\n')
-```
+## Leitura
+- `.read()` lê todo o conteúdo.
+- `.readline()` lê uma linha.
+- `.readlines()` lê todas as linhas como lista.
 
-3) JSON
+## Escrita
+- `.write(texto)` grava texto.
+- `.writelines(lista)` grava várias linhas.
 
-```python
-import json
-with open('dados.json') as f:
-	obj = json.load(f)
-```
+## JSON
+- `json.load()` lê de arquivo JSON.
+- `json.dump()` grava objetos Python em JSON.
 
-4) Tratamento de exceções
-
-```python
-try:
-	1/0
-except ZeroDivisionError:
-	print('Divisão por zero')
-```
-
-Dica: sempre especifique exceções esperadas ao tratar erros.
+## Exceções
+- `try` executa o código que pode falhar.
+- `except` captura erros específicos.
+- `finally` executa sempre, mesmo após erro.

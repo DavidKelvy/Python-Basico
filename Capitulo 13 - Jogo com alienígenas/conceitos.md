@@ -1,14 +1,21 @@
-# Capítulo 13 — Jogo com alienígenas (detalhado)
+# Capítulo 13 — Jogo com alienígenas
 
-1) Movimento de frota
-- Calcular limites e inverter direção ao atingir borda.
+Este capítulo expande o jogo com inimigos, colisões e pontuação.
 
-2) Colisões e remoção segura
+## Grupos de sprites
+- Organizam vários sprites para atualizar e desenhar.
 
-```python
-hits = pygame.sprite.groupcollide(balas, aliens, True, True)
-```
+## Movimento de frota
+- Inimigos se movem juntos e mudam de direção ao encostar nas bordas.
 
-3) Estados de jogo (vidas, reiniciar)
+## Balas
+- Balas são criadas e movem-se pela tela.
+- Geralmente são removidas quando saem da tela ou colidem.
 
-Dica: trate criação e destruição de sprites fora do loop principal quando possível.
+## Colisões
+- Detectar colisão entre sprites usando funções do Pygame.
+- Ao colidir, atualize pontuação e remova objetos.
+
+## Estado do jogo
+- Controle se o jogo está ativo ou pausado.
+- Reinicie o jogo quando o jogador perder.

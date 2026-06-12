@@ -1,26 +1,34 @@
-# Capítulo 09 — Classes e objetos (detalhado)
+# Capítulo 09 — Classes e objetos
 
-1) Classe básica
+Este capítulo introduz orientação a objetos.
 
-```python
-class Carro:
-	def __init__(self, marca, modelo):
-		self.marca = marca
-		self.modelo = modelo
+## Classe
+- Uma classe é um molde para criar objetos.
+- Defina com `class Nome:`.
 
-	def exibir(self):
-		return f'{self.marca} {self.modelo}'
-```
+## Instância
+- Um objeto criado a partir de uma classe.
+- Use `obj = Classe()`.
 
-2) Herança
+## __init__
+- Método construtor chamado ao criar a instância.
+- Recebe `self` e outros parâmetros.
 
-```python
-class CarroEletrico(Carro):
-	def __init__(self, marca, modelo, carga):
-		super().__init__(marca, modelo)
-		self.carga = carga
-```
+## Atributos
+- Armazenam dados no objeto.
+- Exemplo: `self.nome = nome`.
 
-3) Encapsulamento por convenção (`_` e `__`)
+## Métodos
+- Funções definidas dentro da classe.
+- Usam `self` para acessar atributos e outros métodos.
 
-Dica: mantenha responsabilidades da classe coesas (SRP).
+## Herança
+- Uma classe filha herda comportamento da classe pai.
+- Use `class Filha(Pai):`.
+
+## Encapsulamento
+- `_atributo` indica uso interno.
+- `__atributo` cria nome mangled para dificultar acesso externo.
+
+## Composição
+- Uma classe pode conter objetos de outra classe.

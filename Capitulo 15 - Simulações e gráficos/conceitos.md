@@ -1,18 +1,23 @@
-# Capítulo 15 — Simulações e gráficos (detalhado)
+# Capítulo 15 — Simulações e gráficos
 
-1) Simular rolamento de dados
+Este capítulo une código, matemática e visualização.
 
-```python
-import random
-rolls = [random.randint(1,6) for _ in range(1000)]
-```
+## Simulação
+- Repetir experimentos para observar padrões.
+- Use laços para gerar dados de várias execuções.
 
-2) Plotar com matplotlib
+## Aleatoriedade
+- `random.randint()` e `random.choice()` criam valores imprevisíveis.
+- Útil em simulações e jogos.
 
-```python
-import matplotlib.pyplot as plt
-plt.hist(rolls, bins=6)
-plt.show()
-```
+## Dados
+- Salve resultados em listas ou dicionários.
+- Depois, analise médias, somas e frequências.
 
-Dica: use muitas repetições para estimativas estatísticas mais estáveis.
+## Gráficos
+- `matplotlib.pyplot` desenha gráficos.
+- Tipos comuns: linhas, barras e histogramas.
+
+## Visualização
+- Ajuda a interpretar resultados.
+- Use títulos, legendas e labels para claridade.

@@ -1,41 +1,31 @@
-# Capítulo 03 — Listas (detalhado)
+# Capítulo 03 — Listas
 
-1) Criando listas
+Este capítulo mostra listas e como operar coleções ordenadas.
 
-```python
-frutas = ['maçã', 'banana', 'laranja']
-```
+## O que é uma lista?
+- Uma lista é uma coleção ordenada e mutável.
+- Sintaxe: `[1, 2, 3]`.
 
-2) Acessando e modificando
+## Acessar elementos
+- `lista[0]` acessa o primeiro elemento.
+- `lista[-1]` acessa o último elemento.
+- `lista[1:3]` retorna um pedaço (slice).
 
-```python
-print(frutas[0])
-frutas.append('uva')
-frutas[1] = 'manga'
-```
+## Adicionar e remover
+- `.append(item)` adiciona ao final.
+- `.insert(index, item)` insere em posição específica.
+- `.remove(item)` remove a primeira ocorrência do item.
+- `.pop(index)` remove e retorna o item.
 
-3) Remover elementos
-- `.remove(value)`, `.pop(index)`.
+## Ordenação e cópias
+- `.sort()` ordena a lista no lugar.
+- `sorted(lista)` cria uma nova lista ordenada.
+- `lista[:]` ou `list(lista)` criam cópias.
 
-4) Ordenação e cópia
+## Laços e listas
+- `for item in lista:` percorre cada elemento.
+- `enumerate(lista)` retorna índice e valor.
 
-```python
-nums = [3,1,2]
-nums.sort()
-nums_copy = nums[:]  # cópia independente
-```
-
-5) Iteração e `enumerate`
-
-```python
-for i, v in enumerate(frutas):
-	print(i, v)
-```
-
-6) Compreensões de lista
-
-```python
-quadrados = [x**2 for x in range(6)]
-```
-
-Dica: prefira compreensões quando a lógica for simples e legível.
+## Compreensões de lista
+- Criam listas de forma concisa.
+- Exemplo: `[x**2 for x in range(5)]`.

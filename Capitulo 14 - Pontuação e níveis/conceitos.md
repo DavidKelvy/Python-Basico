@@ -1,12 +1,19 @@
-# Capítulo 14 — Pontuação e níveis (detalhado)
+# Capítulo 14 — Pontuação e níveis
 
-1) GameStats e Scoreboard
-- Armazenar pontuação atual, recorde e vidas em objetos.
+Este capítulo adiciona objetivos, níveis e interface ao jogo.
 
-2) Aumentar dificuldade
-- Multiplicadores de velocidade por nível.
+## Pontuação
+- Um valor que aumenta quando o jogador acerta um inimigo.
+- Mostrado na tela durante o jogo.
 
-3) Botões simples
-- Detectar `mouse.get_pos()` e `mouse.get_pressed()` para clicks.
+## Níveis
+- Aumentam a dificuldade progressivamente.
+- Podem acelerar inimigos ou incluir mais obstáculos.
 
-Dica: mantenha lógica de UI separada da lógica do jogo para facilitar manutenção.
+## Botões
+- Detectam cliques do mouse para iniciar ou reiniciar o jogo.
+- `pygame.mouse.get_pressed()` retorna o estado dos botões.
+
+## Estado do jogo
+- Controle o fluxo com variáveis como `jogo_ativo`.
+- Evite executar lógica de jogo quando o jogo estiver pausado.
