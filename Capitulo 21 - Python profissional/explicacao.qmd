@@ -1,3 +1,65 @@
-# Explicação do capítulo
+# Python profissional
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2021%20-%20Python%20profissional/explicacao.qmd#python-profissional)
 
-Este arquivo deve conter todos os conceitos do capítulo, incluindo os mais básicos.
+---
+
+## O que significa Python profissional?
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2021%20-%20Python%20profissional/explicacao.qmd#o-que-significa-python-profissional)
+Python profissional envolve escrever código legível, organizado e reutilizável. Também inclui pensar em manutenção e clareza para outras pessoas.
+
+- Use nomes claros e consistentes.
+- Separe responsabilidades em funções e módulos.
+- Documente o código quando necessário.
+
+> Código limpo é tão importante quanto código que funciona.
+
+```python
+from pathlib import Path
+arquivo = Path("dados.txt")
+print(arquivo.exists())
+```
+
+## Ferramentas da biblioteca padrão
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2021%20-%20Python%20profissional/explicacao.qmd#ferramentas-da-biblioteca-padrao)
+Python traz módulos úteis como pathlib, datetime, json e csv. Eles ajudam a resolver tarefas comuns sem instalar pacotes extras.
+
+- pathlib para caminhos de arquivo.
+- datetime para datas e horas.
+- json e csv para dados estruturados.
+
+> Conhecer a biblioteca padrão aumenta sua produtividade como desenvolvedor.
+
+```python
+from datetime import datetime
+print(datetime.now())
+```
+
+## Boas práticas de código
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2021%20-%20Python%20profissional/explicacao.qmd#boas-praticas-de-codigo)
+Mantenha funções pequenas, evite duplicação e prefira código simples. Esses hábitos tornam o projeto mais fácil de manter no longo prazo.
+
+- Evite funções muito longas.
+- Use comentários apenas quando necessário.
+- Refatore código repetido em funções.
+
+> Pequenas melhorias constantes tornam seu estilo de programação mais profissional.
+
+```python
+def salvar_texto(arquivo, conteudo):
+    with open(arquivo, "w", encoding="utf-8") as f:
+        f.write(conteudo)
+```
+
+---
+
+## Exemplo Prático no VS Code
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2021%20-%20Python%20profissional/explicacao.qmd#python-profissional-exemplo-pratico-no-vs-code)
+1. Abra o VS Code e crie um arquivo chamado `exemplo.py`.
+2. Copie o código abaixo e salve o arquivo.
+3. Execute no terminal com `python exemplo.py`.
+
+```python
+from pathlib import Path
+p = Path("arquivo.txt")
+print(p.exists())
+```

@@ -1,3 +1,66 @@
-# Explicação do capítulo
+# Jogo com alienígenas
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2013%20-%20Jogo%20com%20alien%C3%ADgenas/explicacao.qmd#jogo-com-alienigenas)
 
-Este arquivo deve conter todos os conceitos do capítulo, incluindo os mais básicos.
+---
+
+## O que são alienígenas?
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2013%20-%20Jogo%20com%20alien%C3%ADgenas/explicacao.qmd#o-que-sao-alienigenas)
+Alienígenas são inimigos no jogo. Cada um pode ter posição, vida e comportamento. Eles podem ser modelados com dicionários ou classes.
+
+- Cada alien tem vida e posição.
+- O jogador pode atacar e reduzir a vida.
+- Quando vida chega a zero, o alien é derrotado.
+
+> Modelar inimigos com dicionários facilita adicionar propriedades e comportamentos.
+
+```python
+alien = {"x": 0, "y": 1, "vida": 3}
+print(alien)
+```
+
+## Ataque e defesa
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2013%20-%20Jogo%20com%20alien%C3%ADgenas/explicacao.qmd#ataque-e-defesa)
+O jogador realiza ações como atacar ou fugir. Essas ações alteram o estado do inimigo e do jogo.
+
+- Ataque reduz a vida do inimigo.
+- Cada inimigo pode dar pontos diferentes.
+- Verifique se a vida ficou abaixo de zero.
+
+> Verifique os limites para evitar valores negativos de vida.
+
+```python
+dano = 1
+alien["vida"] -= dano
+if alien["vida"] <= 0:
+    print("Alien derrotado")
+```
+
+## Atualização de estado
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2013%20-%20Jogo%20com%20alien%C3%ADgenas/explicacao.qmd#atualizacao-de-estado)
+A cada ciclo do jogo, atualize posição, vida e pontuação. Isso mantém o jogo dinâmico e previsível.
+
+- Atualize inimigos e jogador a cada rodada.
+- Use laços para repetir ações.
+- Mostre o estado atual quando necessário.
+
+> Uma boa atualização de estado evita bugs e torna o jogo mais fácil de estender.
+
+```python
+while alien["vida"] > 0:
+    print("O jogo continua")
+    break
+```
+
+---
+
+## Exemplo Prático no VS Code
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2013%20-%20Jogo%20com%20alien%C3%ADgenas/explicacao.qmd#jogo-com-alienigenas-exemplo-pratico-no-vs-code)
+1. Abra o VS Code e crie um arquivo chamado `exemplo.py`.
+2. Copie o código abaixo e salve o arquivo.
+3. Execute no terminal com `python exemplo.py`.
+
+```python
+alien = {"vida": 3, "x": 0}
+alien["vida"] -= 1
+print("Vida do alien:", alien["vida"])
+```

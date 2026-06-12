@@ -1,3 +1,74 @@
-# Explicação do capítulo
+# Condicionais
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2005%20-%20Condicionais/explicacao.qmd#condicionais)
 
-Este arquivo deve conter todos os conceitos do capítulo, incluindo os mais básicos.
+---
+
+## O que são condicionais?
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2005%20-%20Condicionais/explicacao.qmd#o-que-sao-condicionais)
+Condicionais escolhem entre caminhos diferentes no programa. if, elif e else permitem reagir aos valores e às entradas do usuário.
+
+- if verifica uma condição.
+- elif adiciona verificações extras.
+- else trata o caso padrão.
+
+> Escreva condições na ordem mais provável para melhorar a eficiência.
+
+```python
+idade = int(input("Digite a idade: "))
+if idade >= 18:
+    print("Maior de idade")
+else:
+    print("Menor de idade")
+```
+
+## Operadores lógicos
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2005%20-%20Condicionais/explicacao.qmd#operadores-logicos)
+and, or e not combinam condições e permitem criar verificações mais complexas.
+
+- and exige todas verdadeiras.
+- or exige pelo menos uma verdadeira.
+- not inverte o resultado lógico.
+
+> Use parênteses para deixar claro o agrupamento de condições.
+
+```python
+tem_ingresso = True
+idade = 16
+if tem_ingresso and idade >= 18:
+    print("Entrada liberada")
+else:
+    print("Entrada negada")
+```
+
+## Boas práticas com condicionais
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2005%20-%20Condicionais/explicacao.qmd#boas-praticas-com-condicionais)
+Mantenha as condições simples e legíveis. Evite aninhar muitos ifs e prefira declarar variáveis auxiliares quando necessário.
+
+- Prefira if/elif/else a múltiplos if independentes.
+- Use nomes claros para condições booleanas.
+- Evite expressões muito longas na mesma linha.
+
+> Separar condições complexas em variáveis nomeadas torna o código mais fácil de entender.
+
+```python
+idade = 20
+aprovado = True
+if idade >= 18 and aprovado:
+    print("Acesso permitido")
+```
+
+---
+
+## Exemplo Prático no VS Code
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2005%20-%20Condicionais/explicacao.qmd#condicionais-exemplo-pratico-no-vs-code)
+1. Abra o VS Code e crie um arquivo chamado `exemplo.py`.
+2. Copie o código abaixo e salve o arquivo.
+3. Execute no terminal com `python exemplo.py`.
+
+```python
+idade = int(input("Digite sua idade: "))
+if idade >= 18:
+    print("Maior de idade")
+else:
+    print("Menor de idade")
+```

@@ -1,3 +1,72 @@
-# Explicação do capítulo
+# Strings e variáveis
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2002%20-%20Strings%20e%20vari%C3%A1veis/explicacao.qmd#strings-e-variaveis)
 
-Este arquivo deve conter todos os conceitos do capítulo, incluindo os mais básicos.
+---
+
+## O que são strings?
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2002%20-%20Strings%20e%20vari%C3%A1veis/explicacao.qmd#o-que-sao-strings)
+Strings são sequências de caracteres usadas para representar texto. Em Python, podem ser delimitadas por aspas simples, duplas ou triplas.
+
+- Aspas simples: 'texto'
+- Aspas duplas: "texto"
+- Aspas triplas para textos longos ou multilinhas.
+- Strings são imutáveis.
+
+> Use f-strings para formatar texto de forma legível e eficiente.
+
+```python
+texto = "Olá, mundo"
+print(texto)
+print(texto[0])
+print(texto[-1])
+```
+
+## Como funcionam as variáveis
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2002%20-%20Strings%20e%20vari%C3%A1veis/explicacao.qmd#como-funcionam-as-variaveis)
+Variáveis armazenam dados em memória e o Python determina o tipo com base no valor atribuído.
+
+- Uma variável pode receber valores diferentes ao longo do tempo.
+- Não é preciso declarar o tipo antes.
+- O nome deve começar com letra ou underscore.
+
+> Prefira nomes como nome_aluno, preco_produto e total_venda.
+
+```python
+nome = "João"
+idade = 28
+nome = "Maria"
+print(nome, idade)
+```
+
+## Métodos úteis de string
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2002%20-%20Strings%20e%20vari%C3%A1veis/explicacao.qmd#metodos-uteis-de-string)
+Strings têm vários métodos para manipular texto, como strip, replace, split e upper.
+
+- strip() remove espaços nas extremidades.
+- replace() substitui partes da string.
+- split() divide o texto em uma lista.
+- upper() e lower() alteram a capitalização.
+
+> Use métodos de string para limpar e formatar dados antes de exibi-los.
+
+```python
+frase = "  Python é legal  "
+print(frase.strip())
+print(frase.replace("legal", "incrível"))
+print(frase.upper())
+```
+
+---
+
+## Exemplo Prático no VS Code
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2002%20-%20Strings%20e%20vari%C3%A1veis/explicacao.qmd#strings-e-variaveis-exemplo-pratico-no-vs-code)
+1. Abra o VS Code e crie um arquivo chamado `exemplo.py`.
+2. Copie o código abaixo e salve o arquivo.
+3. Execute no terminal com `python exemplo.py`.
+
+```python
+nome = input("Qual seu nome? ")
+sobrenome = input("Qual seu sobrenome? ")
+nome_completo = nome + " " + sobrenome
+print("Nome completo:", nome_completo)
+```

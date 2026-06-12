@@ -1,3 +1,68 @@
-# Explicação do capítulo
+# Pontuação e níveis
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2014%20-%20Pontua%C3%A7%C3%A3o%20e%20n%C3%ADveis/explicacao.qmd#pontuacao-e-niveis)
 
-Este arquivo deve conter todos os conceitos do capítulo, incluindo os mais básicos.
+---
+
+## Como funciona a pontuação?
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2014%20-%20Pontua%C3%A7%C3%A3o%20e%20n%C3%ADveis/explicacao.qmd#como-funciona-a-pontuacao)
+Pontuação recompensa ações do jogador. Ela pode crescer ao completar objetivos ou derrotar inimigos.
+
+- A pontuação é acumulativa.
+- Diferentes ações podem dar valores diferentes.
+- Use variáveis para rastrear o total.
+
+> Defina regras claras para pontuação antes de implementar o jogo.
+
+```python
+pontos = 0
+pontos += 10
+print(pontos)
+```
+
+## Subindo de nível
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2014%20-%20Pontua%C3%A7%C3%A3o%20e%20n%C3%ADveis/explicacao.qmd#subindo-de-nivel)
+O nível indica progresso. Ele pode aumentar quando o jogador atinge uma meta de pontos.
+
+- Meta de pontos para subir de nível.
+- Níveis podem aumentar a dificuldade.
+- Mostre qual falta para chegar ao próximo nível.
+
+> Níveis também podem desbloquear novas funcionalidades ou desafios.
+
+```python
+nivel = 1
+if pontos >= 50:
+    nivel += 1
+    print("Nível", nivel)
+```
+
+## Dificuldade e metas
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2014%20-%20Pontua%C3%A7%C3%A3o%20e%20n%C3%ADveis/explicacao.qmd#dificuldade-e-metas)
+A dificuldade deve aumentar de forma equilibrada. Metas claras ajudam o jogador a entender o progresso.
+
+- Aumente a dificuldade gradualmente.
+- Use metas visíveis para orientar o jogador.
+- Considere mais inimigos ou regras diferentes.
+
+> Metas transparentes tornam o jogo mais justo e motivador.
+
+```python
+meta = nivel * 50
+print(f"Faltam {meta - pontos} pontos para subir")
+```
+
+---
+
+## Exemplo Prático no VS Code
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2014%20-%20Pontua%C3%A7%C3%A3o%20e%20n%C3%ADveis/explicacao.qmd#pontuacao-e-niveis-exemplo-pratico-no-vs-code)
+1. Abra o VS Code e crie um arquivo chamado `exemplo.py`.
+2. Copie o código abaixo e salve o arquivo.
+3. Execute no terminal com `python exemplo.py`.
+
+```python
+pontuacao = 40
+nivel = 1
+if pontuacao >= 50:
+    nivel += 1
+print("Nível:", nivel)
+```

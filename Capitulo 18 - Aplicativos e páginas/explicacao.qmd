@@ -1,3 +1,65 @@
-# Explicação do capítulo
+# Aplicativos e páginas
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2018%20-%20Aplicativos%20e%20p%C3%A1ginas/explicacao.qmd#aplicativos-e-paginas)
 
-Este arquivo deve conter todos os conceitos do capítulo, incluindo os mais básicos.
+---
+
+## O que são aplicativos?
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2018%20-%20Aplicativos%20e%20p%C3%A1ginas/explicacao.qmd#o-que-sao-aplicativos)
+Aplicativos podem ser programas de terminal, páginas HTML ou serviços web. Python é capaz de criar e controlar esses formatos.
+
+- Aplicativos de linha de comando usam input e print.
+- Páginas HTML podem ser geradas como texto.
+- Servidores web entregam HTML a navegadores.
+
+> Mesmo sem servidor, gerar HTML em Python demonstra como páginas podem ser construídas dinamicamente.
+
+```python
+titulo = "Minha página"
+html = f"<h1>{titulo}</h1>"
+print(html)
+```
+
+## Gerando páginas HTML
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2018%20-%20Aplicativos%20e%20p%C3%A1ginas/explicacao.qmd#gerando-paginas-html)
+HTML pode ser montado como string em Python. Com isso, você consegue criar conteúdo estático ou dinâmico facilmente.
+
+- Use strings multilinha para HTML.
+- Insira dados com f-strings.
+- Salve em arquivo .html para abrir no navegador.
+
+> Mantenha o HTML simples no início antes de evoluir para estruturas mais complexas.
+
+```python
+html = """<html><body><h1>Olá</h1></body></html>"""
+with open("pagina.html", "w", encoding="utf-8") as f:
+    f.write(html)
+```
+
+## Servidores simples
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2018%20-%20Aplicativos%20e%20p%C3%A1ginas/explicacao.qmd#servidores-simples)
+O módulo http.server permite criar um servidor local básico para servir páginas HTML durante testes.
+
+- Use HTTPServer e BaseHTTPRequestHandler.
+- É útil para protótipos e demonstrações.
+- Não é indicado para produção.
+
+> Esse servidor é ideal para testar páginas estáticas localmente.
+
+```python
+from http.server import BaseHTTPRequestHandler, HTTPServer
+print("Servidor local pronto")
+```
+
+---
+
+## Exemplo Prático no VS Code
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2018%20-%20Aplicativos%20e%20p%C3%A1ginas/explicacao.qmd#aplicativos-e-paginas-exemplo-pratico-no-vs-code)
+1. Abra o VS Code e crie um arquivo chamado `exemplo.py`.
+2. Copie o código abaixo e salve o arquivo.
+3. Execute no terminal com `python exemplo.py`.
+
+```python
+html = "<h1>Minha página</h1>"
+with open("pagina.html", "w", encoding="utf-8") as f:
+    f.write(html)
+```

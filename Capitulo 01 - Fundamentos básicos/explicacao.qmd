@@ -1,3 +1,74 @@
-# Explicação do capítulo
+# Fundamentos básicos
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2001%20-%20Fundamentos%20b%C3%A1sicos/explicacao.qmd#fundamentos-basicos)
 
-Este arquivo deve conter todos os conceitos do capítulo, incluindo os mais básicos.
+---
+
+## O que são fundamentos básicos?
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2001%20-%20Fundamentos%20b%C3%A1sicos/explicacao.qmd#o-que-sao-fundamentos-basicos)
+Fundamentos básicos são o ponto de partida para aprender Python. Eles envolvem conceitos simples como variáveis, tipos, operadores e execução de código.
+
+- Python é uma linguagem interpretada e de alto nível.
+- O arquivo de código deve ter extensão .py.
+- A indentação define blocos em Python.
+
+> Comece com exemplos curtos e teste no terminal para entender o comportamento do código.
+
+```python
+print("Olá, Python!")
+idade = 25
+print(idade)
+```
+
+## Variáveis e tipos de dados
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2001%20-%20Fundamentos%20b%C3%A1sicos/explicacao.qmd#variaveis-e-tipos-de-dados)
+Variáveis são nomes que armazenam valores. Python identifica o tipo automaticamente, sem necessidade de declaração prévia.
+
+- int: números inteiros, como 10 ou -3.
+- float: números decimais, como 2.5.
+- str: textos entre aspas.
+- bool: True ou False.
+
+> Use nomes descritivos e evite caracteres especiais. Substitua espaços por underscore (_).
+
+```python
+nome = "Maria"
+idade = 25
+altura = 1.68
+ativo = True
+print(type(nome))
+```
+
+## Entrada e saída de dados
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2001%20-%20Fundamentos%20b%C3%A1sicos/explicacao.qmd#entrada-e-saida-de-dados)
+A entrada de dados permite interagir com o usuário. A saída exibe resultados no terminal.
+
+- input() lê texto do usuário.
+- print() mostra valores na tela.
+- input() sempre retorna string.
+- Converta input() para int ou float quando necessário.
+
+> Ao receber dados do usuário, valide o tipo antes de usar em cálculos.
+
+```python
+nome = input("Digite seu nome: ")
+idade = int(input("Digite sua idade: "))
+print("Nome:", nome)
+print("Idade:", idade)
+```
+
+---
+
+## Exemplo Prático no VS Code
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2001%20-%20Fundamentos%20b%C3%A1sicos/explicacao.qmd#fundamentos-basicos-exemplo-pratico-no-vs-code)
+1. Abra o VS Code e crie um arquivo chamado `exemplo.py`.
+2. Copie o código abaixo e salve o arquivo.
+3. Execute no terminal com `python exemplo.py`.
+
+```python
+nome = input("Qual seu nome? ")
+idade = int(input("Qual sua idade? "))
+altura = float(input("Qual sua altura? "))
+print("Nome:", nome)
+print("Idade:", idade)
+print("Altura:", altura)
+```

@@ -1,3 +1,67 @@
-# Explicação do capítulo
+# Dados e CSV
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2016%20-%20Dados%20e%20CSV/explicacao.qmd#dados-e-csv)
 
-Este arquivo deve conter todos os conceitos do capítulo, incluindo os mais básicos.
+---
+
+## O que é CSV?
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2016%20-%20Dados%20e%20CSV/explicacao.qmd#o-que-e-csv)
+CSV é um formato de texto para tabelas, onde cada linha representa um registro e as colunas são separadas por vírgulas.
+
+- É amplamente usado para dados tabulares.
+- Pode ser lido por planilhas e programas.
+- É simples e legível por humanos.
+
+> Use CSV quando precisar trocar dados entre sistemas diferentes.
+
+```python
+import csv
+dados = [["nome", "idade"], ["Ana", "23"]]
+```
+
+## Lendo e escrevendo CSV
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2016%20-%20Dados%20e%20CSV/explicacao.qmd#lendo-e-escrevendo-csv)
+Use csv.DictReader e csv.DictWriter para trabalhar com linhas como dicionários, o que torna o acesso aos campos mais claro.
+
+- writeheader() grava o cabeçalho.
+- DictReader lê cada linha como dicionário.
+- Trate valores como strings e converta quando preciso.
+
+> Sempre abra arquivos CSV com newline="" para evitar linhas em branco extras no Windows.
+
+```python
+with open("dados.csv", "w", newline="", encoding="utf-8") as f:
+    escritor = csv.DictWriter(f, fieldnames=["nome", "idade"])
+    escritor.writeheader()
+    escritor.writerow({"nome": "Ana", "idade": "23"})
+```
+
+## Convertendo tipos
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2016%20-%20Dados%20e%20CSV/explicacao.qmd#convertendo-tipos)
+Quando você lê CSV, valores chegam como texto. Converta para int, float ou outros tipos antes de usar em cálculos.
+
+- int() para inteiros.
+- float() para decimais.
+- bool() para valores booleanos quando necessário.
+
+> Valide o conteúdo antes de converter para evitar ValueError.
+
+```python
+idade = int(linha["idade"])
+preco = float(linha["preco"])
+```
+
+---
+
+## Exemplo Prático no VS Code
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2016%20-%20Dados%20e%20CSV/explicacao.qmd#dados-e-csv-exemplo-pratico-no-vs-code)
+1. Abra o VS Code e crie um arquivo chamado `exemplo.py`.
+2. Copie o código abaixo e salve o arquivo.
+3. Execute no terminal com `python exemplo.py`.
+
+```python
+import csv
+with open("dados.csv", "w", newline="", encoding="utf-8") as f:
+    escritor = csv.writer(f)
+    escritor.writerow(["nome", "idade"])
+    escritor.writerow(["Ana", 23])
+```

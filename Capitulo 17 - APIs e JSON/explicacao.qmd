@@ -1,3 +1,65 @@
-# Explicação do capítulo
+# APIs e JSON
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2017%20-%20APIs%20e%20JSON/explicacao.qmd#apis-e-json)
 
-Este arquivo deve conter todos os conceitos do capítulo, incluindo os mais básicos.
+---
+
+## O que é JSON?
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2017%20-%20APIs%20e%20JSON/explicacao.qmd#o-que-e-json)
+JSON é um formato de texto para representar dados estruturados de forma leve. Ele usa objetos e listas para organizar informações.
+
+- Objetos são delimitados por chaves {}.
+- Listas são delimitadas por colchetes [].
+- Strings usam aspas duplas.
+
+> JSON é muito usado em APIs e trocas de dados entre sistemas web.
+
+```python
+import json
+texto = "{"nome": "Ana", "idade": 30}"
+dados = json.loads(texto)
+print(dados)
+```
+
+## Como usar JSON em Python
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2017%20-%20APIs%20e%20JSON/explicacao.qmd#como-usar-json-em-python)
+Use json.loads() para converter texto JSON em dicionário Python e json.dumps() para gerar JSON a partir de dados Python.
+
+- loads() transforma JSON em Python.
+- dumps() transforma Python em JSON.
+- indent facilita a leitura do JSON gerado.
+
+> Use ensure_ascii=False para preservar caracteres acentuados no JSON.
+
+```python
+saida = json.dumps(dados, ensure_ascii=False, indent=2)
+print(saida)
+```
+
+## APIs e integração
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2017%20-%20APIs%20e%20JSON/explicacao.qmd#apis-e-integracao)
+APIs normalmente retornam JSON em respostas HTTP. Saber ler e interpretar esse JSON é essencial para integrar serviços.
+
+- Respostas de API vêm como texto JSON.
+- Extraia os campos necessários do objeto Python.
+- Verifique o status da resposta antes de usar os dados.
+
+> Mesmo sem fazer chamadas HTTP, praticar JSON prepara você para trabalhar com APIs reais.
+
+```python
+resposta = {"status": "ok", "dados": [{"id": 1}]}
+print(resposta["dados"][0]["id"])
+```
+
+---
+
+## Exemplo Prático no VS Code
+[](https://github.com/DavidKelvy/Python-Basico/blob/main/Capitulo%2017%20-%20APIs%20e%20JSON/explicacao.qmd#apis-e-json-exemplo-pratico-no-vs-code)
+1. Abra o VS Code e crie um arquivo chamado `exemplo.py`.
+2. Copie o código abaixo e salve o arquivo.
+3. Execute no terminal com `python exemplo.py`.
+
+```python
+import json
+dados = {"nome": "Ana", "idade": 30}
+print(json.dumps(dados, ensure_ascii=False))
+```
