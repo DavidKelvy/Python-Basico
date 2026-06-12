@@ -1,3 +1,5 @@
+"""Exemplo de strings e verificação de conteúdo."""
 name = "Ada Lovelace"
-print(name.upper())
-print(name.lower())
+print('Maiúsculas:', name.upper())
+print('Minúsculas:', name.lower())
+print('Contém "Ada"?', 'Ada' in name)
