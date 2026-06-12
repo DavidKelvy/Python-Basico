@@ -1,15 +1,39 @@
-# Capítulo 02 — Strings e variáveis
+# Capítulo 02 — Strings e variáveis (detalhado)
 
-Conceitos abordados nos exemplos deste capítulo:
+1) Strings
+- Criação: `'texto'`, "texto", '''texto""'.
+- Indexação e slicing:
 
-- **Strings (`str`)**: sequência de caracteres. Aspas simples e duplas equivalem; aspas triplas para múltiplas linhas.
-- **concatenação**: juntar strings com `+` ou usando f-strings: `f"{nome} tem {idade} anos"`.
-- **indexação e slicing**: `s[0]`, `s[-1]`, `s[1:4]` para acessar partes da string.
-- **métodos de string**: `len()`, `.strip()`, `.split()`, `.replace()`, `.lower()`, `.upper()`.
-- **escape sequences**: `\n` (nova linha), `\t` (tab), `\'`, `\"`.
-- **formatacao**: f-strings, `str.format()` e concatenação.
-- **variáveis**: nomes, atribuição (`=`), boas práticas de nomeação (snake_case).
-- **comentários**: `#` e docstrings para funções.
-- **entrada do usuário**: `input()` e conversão para outros tipos.
+```python
+s = 'python'
+print(s[0])   # 'p'
+print(s[-1])  # 'n'
+print(s[1:4]) # 'yth'
+```
 
-Esses tópicos mostram manipulação básica de texto e armazenamento em variáveis.
+2) Métodos úteis
+- `.strip()`, `.split()`, `.join()`, `.replace()`, `.lower()`, `.upper()`.
+
+```python
+nome = ' Ana ' 
+print(nome.strip())
+print('a,b,c'.split(','))
+```
+
+3) Formatação
+- f-strings: `f"{nome} tem {idade} anos"`.
+
+4) Escape sequences
+- `\\n`, `\\t`, `\\\\`.
+
+5) Variáveis e boas práticas
+- Nomes claros, `snake_case`, evitar sobrescrever builtins.
+
+6) Entrada do usuário
+
+```python
+nome = input('Nome: ')
+print(f'Olá, {nome}')
+```
+
+Dica: use métodos de string para limpar entrada antes de processar.

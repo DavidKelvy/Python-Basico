@@ -1,14 +1,41 @@
-# Capítulo 03 — Listas
+# Capítulo 03 — Listas (detalhado)
 
-Conceitos cobertos neste capítulo:
+1) Criando listas
 
-- **listas (`list`)**: coleção ordenada e mutável: `[]`.
-- **indexação e slicing**: `lista[0]`, `lista[-1]`, `lista[1:3]`.
-- **adicionar/remover**: `.append()`, `.insert()`, `.remove()`, `.pop()`.
-- **ordenar**: `.sort()`, `sorted()` e `.reverse()`.
-- **iterar listas**: `for item in lista:` e `for i, v in enumerate(lista):`.
-- **comprensões de lista**: sintaxe concisa para criar listas: `[x*2 for x in lista]`.
-- **copiar listas**: slicing `lista[:]` ou `list()` para evitar aliasing.
-- **listas aninhadas**: listas dentro de listas (matrizes simples).
+```python
+frutas = ['maçã', 'banana', 'laranja']
+```
 
-As listas são a estrutura principal para coleções ordenadas em Python.
+2) Acessando e modificando
+
+```python
+print(frutas[0])
+frutas.append('uva')
+frutas[1] = 'manga'
+```
+
+3) Remover elementos
+- `.remove(value)`, `.pop(index)`.
+
+4) Ordenação e cópia
+
+```python
+nums = [3,1,2]
+nums.sort()
+nums_copy = nums[:]  # cópia independente
+```
+
+5) Iteração e `enumerate`
+
+```python
+for i, v in enumerate(frutas):
+	print(i, v)
+```
+
+6) Compreensões de lista
+
+```python
+quadrados = [x**2 for x in range(6)]
+```
+
+Dica: prefira compreensões quando a lógica for simples e legível.

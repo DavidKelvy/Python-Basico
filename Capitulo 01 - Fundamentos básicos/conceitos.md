@@ -1,20 +1,88 @@
-# Capítulo 01 — Fundamentos básicos
+# Capítulo 01 — Fundamentos básicos (detalhado)
 
-Este capítulo apresenta os conceitos básicos de Python usados nos exemplos do diretório.
+Descrição: conceitos essenciais e exemplos simples.
 
-- **print()**: Função que envia texto para a saída padrão (terminal). Ex.: `print('Olá')`.
-- **comentários**: Linhas iniciadas por `#` usadas para documentar código.
-- **variáveis**: Armazenam valores por nome; não precisam de declaração de tipo.
-- **tipos básicos**: `int` (inteiros), `float` (ponto flutuante), `str` (texto), `bool` (True/False).
-- **conversão de tipos (casting)**: `int()`, `float()`, `str()` para converter valores.
-- **operadores aritméticos**: `+ - * / // % **` (adição, subtração, multiplicação, divisão, divisão inteira, resto, potência).
-- **precedência de operadores**: padrão matemático; use parênteses para forçar ordem.
-- **entrada do usuário**: `input()` retorna `str`; normalmente convertemos (`int(input())`).
-- **expressões booleanas**: comparações (`== != > < >= <=`) e operadores lógicos (`and`, `or`, `not`).
-- **if/else**: execução condicional básica.
-- **funções simples**: `def nome(): ...` com `return` para retornar valores.
-- **laços básicos**: `for` e `while` para repetir instruções.
-- **tuplas e conjuntos**: `tuple` (imutável), `set` (coleção sem ordem, sem duplicatas).
-- **ambientes virtuais**: uso de `venv`/`virtualenv` para isolar dependências do projeto.
+1) print()
+- Descrição: imprime texto no terminal.
+- Exemplo:
 
-Esses conceitos são a base para os outros capítulos.
+```python
+print('Olá, mundo!')
+```
+
+2) Comentários
+- Descrição: explicam o código; começam com `#`.
+- Exemplo:
+
+```python
+# Isto é um comentário
+x = 5  # comentário após código
+```
+
+3) Variáveis e tipos básicos
+- `int`, `float`, `str`, `bool`.
+- Exemplo:
+
+```python
+idade = 30          # int
+altura = 1.75       # float
+nome = 'Ana'        # str
+ativo = True        # bool
+```
+
+4) Conversão de tipos
+
+```python
+n = input('Idade: ')
+idade = int(n)
+```
+
+5) Operadores aritméticos
+
+```python
+soma = 2 + 3
+resto = 7 % 3
+pot = 2 ** 3
+```
+
+6) Entrada do usuário
+- `input()` sempre retorna `str`; converta quando necessário.
+
+7) Expressões booleanas e condicionais
+
+```python
+if idade >= 18:
+	print('Adulto')
+else:
+	print('Menor')
+```
+
+8) Funções simples
+
+```python
+def saudacao(nome):
+	return f'Olá, {nome}!'
+
+print(saudacao('Ana'))
+```
+
+9) Laços básicos
+
+```python
+for i in range(5):
+	print(i)
+
+n = 0
+while n < 3:
+	print(n)
+	n += 1
+```
+
+10) Tuplas e conjuntos
+- `tuple`: imutável—use para dados fixos.
+- `set`: coleção sem duplicatas.
+
+11) Ambientes virtuais
+- `python -m venv venv` para criar; `venv\\Scripts\\activate` no Windows.
+
+Dica: pratique combinando entrada, conversões e condicionais para consolidar.

@@ -1,12 +1,19 @@
-# Capítulo 18 — Aplicativos e páginas
+# Capítulo 18 — Aplicativos e páginas (detalhado)
 
-Conceitos relacionados ao desenvolvimento web (Django) presentes:
+1) Views e templates (Django)
 
-- **estrutura de projeto Django**: `manage.py`, pasta do projeto (`ll_project`) com `settings`, `urls`, `wsgi`, `asgi`.
-- **apps**: diretórios (ex.: `learning_logs`) que contêm `views.py`, `models.py`, `urls.py`, `templates`.
-- **views e templates**: `views.py` fornece dados; templates (HTML) exibem conteúdo dinâmico.
-- **rotas (`urls.py`)**: mapear URLs para views.
-- **migrations**: sistema para aplicar alterações de esquema de banco de dados.
-- **settings.py**: configurações do projeto (DATABASES, INSTALLED_APPS, DEBUG, STATICFILES).
+```python
+# urls.py
+from django.urls import path
+from . import views
+urlpatterns = [path('', views.index, name='index')]
+```
 
-Esses conceitos são a base para construir aplicações web com Django.
+2) Migrations
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Dica: use ambientes virtuais e `requirements.txt` para replicabilidade.

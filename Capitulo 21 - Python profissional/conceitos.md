@@ -1,13 +1,31 @@
-# Capítulo 21 — Python profissional
+# Capítulo 21 — Python profissional (detalhado)
 
-Conceitos avançados e práticas profissionais presentes:
+1) Pathlib e filesystem
 
-- **pathlib / os / datetime**: manipulação de caminhos, operações no sistema e datas/horas.
-- **sqlite3 e banco de dados**: usar SQLite para armazenamento local e consultas SQL básicas.
-- **comprensões, geradores e `with`**: expressões compactas e geradores para eficiência de memória; `with` para contextos.
-- **decoradores e metaprogramação**: `@decorator` para alterar comportamento de funções/métodos.
-- **empacotamento e módulos**: estrutura de pacote em `pacote_python`, uso de `__init__.py`.
-- **testes com pytest**: arquivos de teste `testes_pytest.py` e fluxo de execução de testes.
-- **requisitos e boas práticas**: `requirements_example.txt` e organização do projeto.
+```python
+from pathlib import Path
+p = Path('arquivo.txt')
+print(p.exists())
+```
 
-Este capítulo prepara o desenvolvedor para práticas profissionais em Python.
+2) SQLite básico
+
+```python
+import sqlite3
+conn = sqlite3.connect('db.sqlite3')
+```
+
+3) Decoradores
+
+```python
+def log(func):
+    def wrapper(*args, **kwargs):
+        print('chamando', func.__name__)
+        return func(*args, **kwargs)
+    return wrapper
+```
+
+4) Testes e empacotamento
+- `pytest` e `requirements_example.txt`.
+
+Dica: escreva README e exemplos de uso para pacotes que for distribuir.

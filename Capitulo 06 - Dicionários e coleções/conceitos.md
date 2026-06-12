@@ -1,11 +1,23 @@
-# Capítulo 06 — Dicionários e coleções
+# Capítulo 06 — Dicionários e coleções (detalhado)
 
-Conceitos principais:
+1) Dicionários
 
-- **dicionários (`dict`)**: coleção chave → valor. Acesso com `dict[chave]` ou `dict.get(chave, default)`.
-- **métodos de dict**: `.keys()`, `.values()`, `.items()`, `.update()`, `.pop()`.
-- **listas vs tuplas vs sets vs dicts**: diferenças em mutabilidade, ordenação e uso.
-- **muitos_usuarios / linguagens_favoritas**: exemplos de estruturas aninhadas (listas de dicionários, dicionários de listas).
-- **iteração em coleções**: percorrer chaves, valores ou pares chave-valor.
+```python
+pessoa = {'nome': 'Ana', 'idade': 30}
+print(pessoa['nome'])
+print(pessoa.get('altura', 'não informado'))
+```
 
-Dicionários são ideais para representar registros e dados associados por chave.
+2) Métodos úteis
+- `.keys()`, `.values()`, `.items()`, `.update()`.
+
+3) Estruturas aninhadas
+
+```python
+usuarios = [{'nome': 'Ana'}, {'nome': 'Bruno'}]
+```
+
+4) Sets e tuplas
+- `set` para coleções sem duplicatas; `tuple` para imutabilidade.
+
+Dica: use `dict.get()` para evitar exceções quando a chave pode faltar.

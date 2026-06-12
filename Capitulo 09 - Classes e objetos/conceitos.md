@@ -1,14 +1,26 @@
-# Capítulo 09 — Classes e objetos
+# Capítulo 09 — Classes e objetos (detalhado)
 
-Conceitos de orientação a objetos presentes nos exemplos:
+1) Classe básica
 
-- **classes (`class`)**: definição de tipos personalizados com atributos e métodos.
-- **construtor `__init__`**: inicializa instâncias; `self` referencia o objeto.
-- **atributos de instância vs atributos de classe**: dados por objeto ou compartilhados entre instâncias.
-- **métodos**: funções definidas na classe que operam sobre a instância.
-- **encapsulamento (convenção)**: `_nome` ou `__nome` para indicar uso interno.
-- **herança**: subclasse estende comportamento de superclasse.
-- **composição**: usar objetos dentro de outros objetos (ex.: `Car` contendo `Engine`).
-- **importar classes**: dividir classes em módulos e importar conforme os exemplos `importando_classes`.
+```python
+class Carro:
+	def __init__(self, marca, modelo):
+		self.marca = marca
+		self.modelo = modelo
 
-A OOP facilita modelar entidades do mundo real no código.
+	def exibir(self):
+		return f'{self.marca} {self.modelo}'
+```
+
+2) Herança
+
+```python
+class CarroEletrico(Carro):
+	def __init__(self, marca, modelo, carga):
+		super().__init__(marca, modelo)
+		self.carga = carga
+```
+
+3) Encapsulamento por convenção (`_` e `__`)
+
+Dica: mantenha responsabilidades da classe coesas (SRP).

@@ -1,12 +1,15 @@
-# Capítulo 19 — Usuários e dados
+# Capítulo 19 — Usuários e dados (detalhado)
 
-Conceitos presentes neste capítulo (Django avançado):
+1) Models e autenticação (Django)
 
-- **modelos (models.py)**: definição de entidades do banco de dados como classes Python.
-- **autenticação e autorização**: permitir usuários criarem e gerenciarem seus próprios dados.
-- **views baseadas em função e classe**: formas de estruturar lógica de apresentação.
-- **forms e validação**: obter e validar dados enviados por usuários.
-- **templates protegidos**: mostrar conteúdo condicionalmente para usuários autenticados.
-- **migrations e testes**: manter histórico de alterações de banco e garantir qualidade com testes.
+```python
+from django.db import models
+class Topic(models.Model):
+    text = models.CharField(max_length=200)
+    owner = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+```
 
-O capítulo trata de disponibilizar dados por usuário e proteger acesso.
+2) Views protegidas
+- Usar `@login_required` para limitar acesso.
+
+Dica: sempre validar entradas em forms para prevenir dados inválidos.

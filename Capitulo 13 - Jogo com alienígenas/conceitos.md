@@ -1,11 +1,14 @@
-# Capítulo 13 — Jogo com alienígenas
+# Capítulo 13 — Jogo com alienígenas (detalhado)
 
-Conceitos e padrões aplicados neste capítulo:
+1) Movimento de frota
+- Calcular limites e inverter direção ao atingir borda.
 
-- **grupos de sprites**: organizar múltiplos objetos (aliens, balas) e atualizar/desenhar coletivamente.
-- **movimentação em frota**: algoritmo para mover inimigos em grupo e detectar bordas.
-- **detecção de colisões**: `spritecollide`, colisões entre balas e inimigos, remoção e pontuação.
-- **gerenciamento de objetos**: criar, atualizar e destruir entidades (balas, aliens) com segurança.
-- **estados do jogo**: controle de início, fim, vidas e reinício.
+2) Colisões e remoção segura
 
-Esses conceitos cobrem a lógica principal de um jogo de tiro com inimigos.
+```python
+hits = pygame.sprite.groupcollide(balas, aliens, True, True)
+```
+
+3) Estados de jogo (vidas, reiniciar)
+
+Dica: trate criação e destruição de sprites fora do loop principal quando possível.

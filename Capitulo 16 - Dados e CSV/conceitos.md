@@ -1,11 +1,21 @@
-# Capítulo 16 — Dados e CSV
+# Capítulo 16 — Dados e CSV (detalhado)
 
-Conceitos abordados:
+1) Leitura básica com `csv`
 
-- **formato CSV**: valores separados por vírgula; leitura com o módulo `csv` ou `pandas`.
-- **`csv.reader` / `csv.DictReader`**: ferramentas para iterar linhas de arquivos CSV.
-- **processamento de séries temporais**: extrair colunas de datas/valores e converter tipos.
-- **geojson / dados geoespaciais**: arquivos `.geojson` para representar features geográficas.
-- **limpeza de dados**: lidar com valores ausentes e formatos inconsistentes.
+```python
+import csv
+with open('sitka_weather_2021_simples.csv') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+```
 
-Esses conceitos são essenciais para trabalhar com datasets tabulares e geográficos.
+2) Usando `pandas` para facilitar
+
+```python
+import pandas as pd
+df = pd.read_csv('sitka_weather_2021_simples.csv')
+print(df.head())
+```
+
+Dica: verifique o encoding e delimitador do CSV antes de processar.

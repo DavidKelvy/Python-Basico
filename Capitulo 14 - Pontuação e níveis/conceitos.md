@@ -1,11 +1,12 @@
-# Capítulo 14 — Pontuação e níveis
+# Capítulo 14 — Pontuação e níveis (detalhado)
 
-Conceitos encontrados:
+1) GameStats e Scoreboard
+- Armazenar pontuação atual, recorde e vidas em objetos.
 
-- **pontuação (scoreboard)**: armazenar e exibir pontos, atualizar quando inimigos são destruídos.
-- **níveis e dificuldade**: aumentar velocidade/quantidade de inimigos conforme o jogador avança.
-- **estatísticas do jogo**: objeto `GameStats` para salvar vidas, pontuação e estado de jogo.
-- **botões e UI simples**: detectar clique em áreas para iniciar/reiniciar o jogo.
-- **persistência opcional**: salvar recordes em arquivo para consultas futuras.
+2) Aumentar dificuldade
+- Multiplicadores de velocidade por nível.
 
-Implementa mecânicas de progressão e feedback ao jogador.
+3) Botões simples
+- Detectar `mouse.get_pos()` e `mouse.get_pressed()` para clicks.
+
+Dica: mantenha lógica de UI separada da lógica do jogo para facilitar manutenção.

@@ -1,11 +1,18 @@
-# Capítulo 15 — Simulações e gráficos
+# Capítulo 15 — Simulações e gráficos (detalhado)
 
-Conceitos principais:
+1) Simular rolamento de dados
 
-- **aleatoriedade**: módulo `random` para simular eventos (rolar dados, caminhadas aleatórias).
-- **modelagem de objetos**: classes como `Die` para encapsular comportamento de um dado.
-- **coleta de estatísticas**: executar muitas repetições para construir distribuições.
-- **visualização**: uso de `matplotlib` para plotar gráficos de linha, scatter e histograma.
-- **caminhada aleatória**: simular trajetórias e visualizar resultados.
+```python
+import random
+rolls = [random.randint(1,6) for _ in range(1000)]
+```
 
-Simulações + gráficos ajudam a entender resultados estatísticos e comportamentos.
+2) Plotar com matplotlib
+
+```python
+import matplotlib.pyplot as plt
+plt.hist(rolls, bins=6)
+plt.show()
+```
+
+Dica: use muitas repetições para estimativas estatísticas mais estáveis.

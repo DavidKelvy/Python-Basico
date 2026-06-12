@@ -1,13 +1,37 @@
-# Capítulo 04 — Laços e operações numéricas
+# Capítulo 04 — Laços e operações numéricas (detalhado)
 
-Conceitos principais:
+1) `for` com `range`
 
-- **laços `for`**: iteração sobre sequências; uso de `range()` para índices.
-- **laços `while`**: repetição baseada em condição booleana.
-- **controle de fluxo em laços**: `break` (interrompe) e `continue` (pula para próxima iteração).
-- **função `range()`**: gera sequências numéricas: `range(start, stop, step)`.
-- **operações numéricas**: soma, subtração, multiplicação, divisão, módulo, potência.
-- **funções matemáticas**: `abs()`, `round()`, `pow()`, e módulo `math` para funções avançadas.
-- **iterações com coleções**: `for item in lista:` e `for chave, valor in dict.items()`.
+```python
+for i in range(1, 6):
+	print(i)
+```
 
-Esses conceitos permitem automatizar cálculos e processar sequências de dados.
+2) `while`
+
+```python
+n = 0
+while n < 3:
+	print(n)
+	n += 1
+```
+
+3) `break` e `continue`
+
+```python
+for i in range(10):
+	if i == 5:
+		break
+	if i % 2 == 0:
+		continue
+	print(i)
+```
+
+4) Operações numéricas e `math`
+
+```python
+import math
+print(math.sqrt(16))
+```
+
+Dica: use `enumerate` e `zip` para iterar com índices e múltiplas sequências.

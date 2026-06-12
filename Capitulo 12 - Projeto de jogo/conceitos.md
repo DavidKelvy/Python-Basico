@@ -1,13 +1,21 @@
-# Capítulo 12 — Projeto de jogo
+# Capítulo 12 — Projeto de jogo (detalhado)
 
-Conceitos usados no projeto de jogo (baseado em Pygame):
+1) Estrutura e `settings`
+- Centralize constantes (tamanho da tela, cores, velocidades).
 
-- **estrutura do projeto**: separar `settings`, `main` e módulos (`nave`, `bullet`).
-- **inicialização do Pygame**: `pygame.init()` e criação da janela com `pygame.display.set_mode()`.
-- **loop do jogo**: evento principal que processa entradas, atualiza estado e desenha tela repetidamente.
-- **event loop**: lidar com `pygame.event.get()` para teclas, fechamento e ações do usuário.
-- **sprites e imagens**: carregar imagens (`.bmp`) e desenhar com `blit()`; usar `Rect` para posicionamento e colisões.
-- **controle de taxa de quadros**: `pygame.time.Clock()` para limitar FPS.
-- **módulo de configurações**: centralizar constantes (tamanhos, cores, velocidade) em `settings.py`.
+2) Loop principal
 
-Esses conceitos formam a base de um jogo simples com Pygame.
+```python
+while running:
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			running = False
+	# atualizar estado
+	# desenhar tela
+	pygame.display.flip()
+```
+
+3) Sprites e colisões
+- Use `pygame.sprite.Sprite` e `Group` para organizar atualizações e desenho.
+
+Dica: mantenha atualização de lógica e desenho separados para clareza.

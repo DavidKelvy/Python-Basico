@@ -1,13 +1,34 @@
-# Capítulo 10 — Arquivos e exceções
+# Capítulo 10 — Arquivos e exceções (detalhado)
 
-Conceitos encontrados:
+1) Leitura com `with`
 
-- **abrir arquivos**: `open(path, mode)` com modos `'r'`, `'w'`, `'a'`, `'r+'`.
-- **ler arquivos**: `.read()`, `.readline()`, `.readlines()`.
-- **escrever arquivos**: `.write()` e `with open(...) as f:` para gerenciar contexto.
-- **context manager (`with`)**: garante fechamento automático do arquivo.
-- **exceções**: `try/except/else/finally` para tratar erros (ex.: `FileNotFoundError`, `ValueError`, `ZeroDivisionError`).
-- **json**: `json.load()` e `json.dump()` para armazenar e recuperar estruturas em arquivos `.json`.
-- **contagem e processamento de texto**: ler arquivos grandes e processar linhas (ex.: contagem de palavras).
+```python
+with open('arquivo.txt', 'r', encoding='utf-8') as f:
+	conteudo = f.read()
+```
 
-Tratamento de arquivos e exceções torna o código mais robusto.
+2) Escrita
+
+```python
+with open('out.txt', 'w', encoding='utf-8') as f:
+	f.write('linha\\n')
+```
+
+3) JSON
+
+```python
+import json
+with open('dados.json') as f:
+	obj = json.load(f)
+```
+
+4) Tratamento de exceções
+
+```python
+try:
+	1/0
+except ZeroDivisionError:
+	print('Divisão por zero')
+```
+
+Dica: sempre especifique exceções esperadas ao tratar erros.
